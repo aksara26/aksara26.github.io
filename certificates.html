@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Certificates - Arya Wira Pratama</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Gochi+Hand&family=Caveat:wght@600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<style>
+.cert-intro{margin-top:42px;display:flex;justify-content:space-between;gap:30px;align-items:end;}
+.cert-intro h1{font-family:'Gochi Hand',cursive;font-size:34px;font-weight:400;margin:7px 0;}
+.cert-intro p{max-width:650px;font-size:13px;line-height:1.8;}
+.tiny-label{font-size:11px;letter-spacing:2px;opacity:.6;}
+.cert-note{background:var(--yellow);padding:18px 22px;font-family:'Gochi Hand',cursive;font-size:20px;transform:rotate(2deg);box-shadow:3px 4px 0 rgba(0,0,0,.1);}
+.cert-grid{margin-top:38px;display:grid;grid-template-columns:repeat(2,1fr);gap:24px;}
+.cert-card{background:var(--paper);border:1.5px dashed var(--pink);padding:24px;border-radius:7px;box-shadow:3px 4px 0 rgba(0,0,0,.08);transform:rotate(-.5deg);}
+.cert-card:nth-child(even){background:var(--blue);transform:rotate(.6deg);}
+.cert-number{font-size:11px;opacity:.55;letter-spacing:2px;}
+.cert-card h2{font-family:'Gochi Hand',cursive;font-size:25px;font-weight:400;margin:12px 0 5px;}
+.cert-card .issuer{font-size:12px;opacity:.7;margin-bottom:14px;}
+.cert-card p{font-size:13px;line-height:1.7;}
+.cert-status{display:inline-block;margin-top:15px;padding:5px 9px;border:1px solid var(--ink);font-size:10px;letter-spacing:1px;background:var(--pink-soft);}
+.cert-footer{margin-top:35px;text-align:center;font-family:'Gochi Hand',cursive;font-size:20px;}
+@media(max-width:760px){.cert-intro{display:block}.cert-note{display:inline-block;margin-top:18px}.cert-grid{grid-template-columns:1fr;}}
+</style>
+</head>
+<body>
+<div class="window">
+<div class="titlebar"><div class="left"><span>&#8592;&#8594;</span><span>&#10022;</span></div><div class="right"><span>&#8722;</span><span>&#9633;</span><span>&#10005;</span></div></div>
+<div class="content">
+<div class="header">
+  <div class="logo reveal"><div class="l1"><span>C</span><span>e</span><span>r</span><span>t</span><span>s</span></div><div class="l2">my learning</div><div class="star twinkle">&#9734;</div></div>
+  <div class="welcome reveal">little proof<br>of the journey <span class="twinkle">&#9733;</span><div style="border-bottom:2px solid #222;margin-top:6px;width:220px;margin-left:auto;"></div></div>
+</div>
+<nav>
+<a href="index.html" class="reveal">HOME</a><a href="biodata.html" class="reveal">BIODATA</a><a href="riwayat.html" class="reveal">RIWAYAT</a><a href="projects.html" class="reveal">PROJECTS</a><a href="certificates.html" class="reveal">CERTIFICATES</a>
+</nav>
+<div class="clock"><div>[ <span id="clock-time">--:--:-- --</span> ]</div><div id="clock-date">MONTH DD, YYYY</div></div>
+<section class="cert-intro reveal"><div><span class="tiny-label">CERTIFICATES & ACHIEVEMENTS</span><h1>things i've completed <span class="twinkle">&#9734;</span></h1><p>Halaman untuk menyimpan sertifikat, pelatihan, dan pencapaian yang ingin ditampilkan di portofolio.</p></div><div class="cert-note">learning<br>leaves traces.</div></section>
+<section class="cert-grid">
+<article class="cert-card reveal"><span class="cert-number">01 / CERTIFICATE</span><h2>Coming Soon</h2><div class="issuer">Tambahkan nama sertifikat di sini</div><p>Contoh: sertifikat kursus, workshop, seminar, atau pelatihan yang sudah diselesaikan.</p><span class="cert-status">READY TO ADD</span></article>
+<article class="cert-card reveal"><span class="cert-number">02 / CERTIFICATE</span><h2>Coming Soon</h2><div class="issuer">Tambahkan penyelenggara</div><p>Setiap kartu bisa nanti diisi judul, penyelenggara, tahun, deskripsi singkat, dan gambar sertifikat.</p><span class="cert-status">READY TO ADD</span></article>
+</section>
+<div class="cert-footer reveal">one certificate, one little step &#9825;</div>
+<div class="thanks reveal">thanks for visiting &#9825;</div>
+</div></div>
+<script src="script.js"></script>
+</body>
+</html>

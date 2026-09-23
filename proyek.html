@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Proyek - Arya Wira Pratama</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Gochi+Hand&family=Caveat:wght@600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- tetap memakai style utama website kamu -->
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="projects.css">
+</head>
+
+<body>
+<div class="window">
+
+  <div class="titlebar">
+    <div class="left">
+      <span>&#8592;&#8594;</span>
+      <span>&#10022;</span>
+    </div>
+    <div class="right">
+      <span>&#8722;</span>
+      <span>&#9633;</span>
+      <span>&#10005;</span>
+    </div>
+  </div>
+
+  <div class="content">
+
+    <!-- HEADER -->
+    <div class="header">
+      <div class="logo reveal">
+        <div class="l1">
+          <span>P</span><span>r</span><span>o</span><span>j</span><span>e</span><span>c</span><span>t</span><span>s</span>
+        </div>
+        <div class="l2">karya Arya</div>
+        <div class="star twinkle">&#9734;</div>
+      </div>
+
+      <div class="welcome reveal">
+        hal-hal yang sudah dibuat<br>
+        dan sedang dipelajari <span class="twinkle">&#9733;</span>
+        <div class="header-line"></div>
+      </div>
+    </div>
+
+    <!-- NAVBAR -->
+    <nav>
+      <a href="index.html" class="reveal">HOME</a>
+      <a href="biodata.html" class="reveal">BIODATA</a>
+      <a href="riwayat.html" class="reveal">RIWAYAT</a>
+      <a href="projects.html" class="reveal">PROJECTS</a>
+      <a href="certificates.html" class="reveal">CERTIFICATES</a>
+    </nav>
+
+    <!-- CLOCK -->
+    <div class="clock">
+      <div>[ <span id="clock-time">--:--:-- --</span> ]</div>
+      <div id="clock-date">MONTH DD, YYYY</div>
+    </div>
+
+    <!-- INTRO -->
+    <section class="project-intro reveal">
+      <div>
+        <span class="tiny-label">RUANG KARYAKU</span>
+        <h1>proyek &amp; eksperimen <span class="twinkle">&#9734;</span></h1>
+        <p>
+          Tempat untuk menyimpan proyek, latihan coding, website,
+          dan hal-hal yang sedang aku pelajari.
+        </p>
+      </div>
+
+      <div class="project-note">
+        <span>saat ini</span><br>
+        belajar &amp;<br>
+        membuat
+      </div>
+    </section>
+
+    <!-- FILTER -->
+    <div class="project-tools reveal">
+      <button class="filter-btn active" data-filter="all">semua</button>
+      <button class="filter-btn" data-filter="cpp">C++</button>
+      <button class="filter-btn" data-filter="python">Python</button>
+      <button class="filter-btn" data-filter="web">Web</button>
+      <button class="filter-btn" data-filter="other">Lainnya</button>
+    </div>
+
+    <!-- PROJECT GRID -->
+    <section class="projects-grid" id="projects">
+
+      <article class="project-card reveal" data-category="web">
+        <div class="card-top">
+          <span class="project-number">01</span>
+          <span class="project-type">WEB</span>
+        </div>
+
+        <div class="project-icon">&#10022;</div>
+
+        <h2>Portofolio Pribadi</h2>
+        <p>
+          Website pribadi untuk memperkenalkan diri, pendidikan,
+          proyek, dan perjalanan belajar.
+        </p>
+
+        <div class="tech">
+          <span>HTML</span>
+          <span>CSS</span>
+          <span>JS</span>
+        </div>
+
+        <a class="project-link" href="index.html">
+          buka proyek <span>&#8594;</span>
+        </a>
+      </article>
+
+
+      <article class="project-card pink-card reveal" data-category="cpp">
+        <div class="card-top">
+          <span class="project-number">02</span>
+          <span class="project-type">C++</span>
+        </div>
+
+        <div class="project-icon">&#9829;</div>
+
+        <h2>Logika Pertarungan</h2>
+        <p>
+          Latihan membuat sistem pertarungan sederhana dengan logika
+          damage, critical hit, kondisi, dan perhitungan.
+        </p>
+
+        <div class="tech">
+          <span>C++</span>
+          <span>Logic</span>
+          <span>Algorithm</span>
+        </div>
+
+        <a class="project-link" href="https://github.com/aksara26" target="_blank" rel="noopener">
+          lihat di github <span>&#8594;</span>
+        </a>
+      </article>
+
+
+      <article class="project-card blue-card reveal" data-category="python">
+        <div class="card-top">
+          <span class="project-number">03</span>
+          <span class="project-type">PYTHON</span>
+        </div>
+
+        <div class="project-icon">&#9733;</div>
+
+        <h2>Belajar Python</h2>
+        <p>
+          Kumpulan latihan Python dari dasar: variabel, output,
+          f-string, logika, dan latihan algoritma sederhana.
+        </p>
+
+        <div class="tech">
+          <span>Python</span>
+          <span>Basic</span>
+          <span>Algorithm</span>
+        </div>
+
+        <a class="project-link" href="https://github.com/aksara26" target="_blank" rel="noopener">
+          lihat di github <span>&#8594;</span>
+        </a>
+      </article>
+
+
+      <article class="project-card purple-card reveal" data-category="web">
+        <div class="card-top">
+          <span class="project-number">04</span>
+          <span class="project-type">WEB</span>
+        </div>
+
+        <div class="project-icon">&#10003;</div>
+
+        <h2>Biodata Pribadi</h2>
+        <p>
+          Halaman biodata dengan gaya scrapbook, animasi ringan,
+          navigasi antar halaman, dan informasi pribadi.
+        </p>
+
+        <div class="tech">
+          <span>HTML</span>
+          <span>CSS</span>
+          <span>JS</span>
+        </div>
+
+        <a class="project-link" href="biodata.html">
+          buka proyek <span>&#8594;</span>
+        </a>
+      </article>
+
+
+      <article class="project-card green-card reveal" data-category="other">
+        <div class="card-top">
+          <span class="project-number">05</span>
+          <span class="project-type">GITHUB</span>
+        </div>
+
+        <div class="project-icon">&#9788;</div>
+
+        <h2>Perjalanan Git &amp; GitHub</h2>
+        <p>
+          Dokumentasi perjalanan belajar Git, repository, branch,
+          commit, push, dan pengelolaan proyek di GitHub.
+        </p>
+
+        <div class="tech">
+          <span>Git</span>
+          <span>GitHub</span>
+          <span>Linux</span>
+        </div>
+
+        <a class="project-link" href="https://github.com/aksara26" target="_blank" rel="noopener">
+          kunjungi github <span>&#8594;</span>
+        </a>
+      </article>
+
+
+      <article class="project-card yellow-card reveal" data-category="other">
+        <div class="card-top">
+          <span class="project-number">06</span>
+          <span class="project-type">SEGERA HADIR</span>
+        </div>
+
+        <div class="project-icon">&#9734;</div>
+
+        <h2>Proyek Berikutnya</h2>
+        <p>
+          Ruang untuk proyek berikutnya. Bisa diisi dengan aplikasi,
+          website, atau proyek coding baru yang sudah selesai.
+        </p>
+
+        <div class="tech">
+          <span>idea</span>
+          <span>build</span>
+          <span>learn</span>
+        </div>
+
+        <span class="project-link disabled">
+          segera hadir <span>&#8594;</span>
+        </span>
+      </article>
+
+    </section>
+
+    <!-- GITHUB NOTE -->
+    <div class="github-note reveal">
+      <div class="note-tape"></div>
+      <span class="note-star">&#9733;</span>
+      <h3>lebih banyak di github</h3>
+      <p>
+        Proyek yang sudah dikembangkan lebih lanjut akan
+        ditambahkan ke repository GitHub.
+      </p>
+      <a href="https://github.com/aksara26" target="_blank" rel="noopener">
+        github.com/aksara26 &#8594;
+      </a>
+    </div>
+
+    <div class="thanks reveal">terus belajar, terus membuat &#9825;</div>
+
+  </div>
+</div>
+
+<script src="projects.js"></script>
+</body>
+</html>

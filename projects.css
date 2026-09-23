@@ -1,0 +1,306 @@
+/* =========================================================
+   PROJECTS PAGE
+   Mengikuti style utama portfolio Arya
+   ========================================================= */
+
+.header-line{
+  border-bottom:2px solid #222;
+  margin-top:6px;
+  width:220px;
+  margin-left:auto;
+}
+
+/* warna tambahan khusus kartu project */
+.pink-card{--card-color:var(--pink); --card-soft:var(--pink-soft);}
+.blue-card{--card-color:var(--blue); --card-soft:#eef4f6;}
+.purple-card{--card-color:var(--purple); --card-soft:#f1edf4;}
+.green-card{--card-color:var(--green); --card-soft:#eef3ec;}
+.yellow-card{--card-color:var(--yellow); --card-soft:#f8f3e6;}
+
+/* ===== intro ===== */
+.project-intro{
+  margin-top:42px;
+  display:flex;
+  justify-content:space-between;
+  align-items:flex-end;
+  gap:30px;
+}
+
+.tiny-label{
+  font-family:'Space Mono',monospace;
+  font-size:11px;
+  letter-spacing:2px;
+  opacity:.55;
+}
+
+.project-intro h1{
+  font-family:'Gochi Hand',cursive;
+  font-size:34px;
+  font-weight:400;
+  margin:7px 0 10px;
+  text-decoration:underline;
+  text-decoration-thickness:1.5px;
+  text-underline-offset:5px;
+}
+
+.project-intro p{
+  max-width:610px;
+  font-family:'Space Mono',monospace;
+  font-size:13px;
+  line-height:1.8;
+  margin:0;
+}
+
+.project-note{
+  width:135px;
+  min-width:135px;
+  padding:16px;
+  border:1.5px solid var(--blue);
+  border-radius:5px;
+  font-family:'Gochi Hand',cursive;
+  font-size:18px;
+  line-height:1.25;
+  transform:rotate(3deg);
+  text-align:center;
+}
+
+/* ===== filter ===== */
+.project-tools{
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+  margin:34px 0 25px;
+}
+
+.filter-btn{
+  border:1.5px solid var(--ink);
+  background:var(--paper);
+  color:var(--ink);
+  font-family:'Gochi Hand',cursive;
+  font-size:17px;
+  padding:6px 15px;
+  cursor:pointer;
+  border-radius:4px;
+  transition:.18s ease;
+}
+
+.filter-btn:nth-child(2){transform:rotate(-1.5deg);}
+.filter-btn:nth-child(3){transform:rotate(1.5deg);}
+.filter-btn:nth-child(4){transform:rotate(-1deg);}
+.filter-btn:nth-child(5){transform:rotate(1deg);}
+
+.filter-btn:hover,
+.filter-btn.active{
+  background:var(--pink);
+  transform:translateY(-2px) rotate(0deg);
+}
+
+/* ===== project cards ===== */
+.projects-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:25px;
+  align-items:stretch;
+}
+
+.project-card{
+  position:relative;
+  min-height:360px;
+  padding:22px 21px 20px;
+  border:1.5px dashed var(--card-color, var(--pink));
+  background:var(--card-soft, var(--pink-soft));
+  border-radius:7px;
+  display:flex;
+  flex-direction:column;
+  transform:rotate(-.7deg);
+  transition:
+    transform .2s ease,
+    box-shadow .2s ease,
+    opacity .25s ease;
+}
+
+.project-card:nth-child(even){
+  transform:rotate(.8deg);
+}
+
+.project-card:hover{
+  transform:translateY(-7px) rotate(0deg);
+  box-shadow:5px 7px 0 rgba(0,0,0,.08);
+}
+
+.project-card.hidden{
+  display:none;
+}
+
+.card-top{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  font-family:'Space Mono',monospace;
+  font-size:10px;
+  letter-spacing:1px;
+  opacity:.65;
+}
+
+.project-number{
+  font-weight:700;
+}
+
+.project-type{
+  border:1px solid currentColor;
+  border-radius:20px;
+  padding:4px 8px;
+}
+
+.project-icon{
+  width:47px;
+  height:47px;
+  border:1.5px solid var(--ink);
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:21px;
+  margin:27px 0 16px;
+  background:var(--paper);
+}
+
+.project-card h2{
+  font-family:'Gochi Hand',cursive;
+  font-size:26px;
+  font-weight:400;
+  margin:0 0 11px;
+}
+
+.project-card p{
+  font-family:'Space Mono',monospace;
+  font-size:12px;
+  line-height:1.75;
+  margin:0;
+  opacity:.82;
+}
+
+.tech{
+  display:flex;
+  flex-wrap:wrap;
+  gap:6px;
+  margin-top:auto;
+  padding-top:22px;
+}
+
+.tech span{
+  font-family:'Space Mono',monospace;
+  font-size:10px;
+  border:1px solid rgba(51,48,46,.35);
+  padding:5px 7px;
+  border-radius:3px;
+  background:rgba(255,255,255,.4);
+}
+
+.project-link{
+  display:inline-flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:15px;
+  margin-top:17px;
+  padding-top:13px;
+  border-top:1px dashed rgba(51,48,46,.3);
+  color:var(--ink);
+  text-decoration:none;
+  font-family:'Gochi Hand',cursive;
+  font-size:17px;
+}
+
+.project-link:hover{
+  text-decoration:underline;
+}
+
+.project-link.disabled{
+  opacity:.45;
+  cursor:default;
+}
+
+/* ===== github note ===== */
+.github-note{
+  position:relative;
+  max-width:520px;
+  margin:58px auto 0;
+  padding:25px 27px 23px;
+  background:#fbfbf6;
+  border:1px solid #e2e2da;
+  box-shadow:4px 6px 12px rgba(0,0,0,.08);
+  transform:rotate(-1.2deg);
+}
+
+.note-tape{
+  position:absolute;
+  top:-11px;
+  left:50%;
+  width:85px;
+  height:21px;
+  background:rgba(210,205,190,.6);
+  transform:translateX(-50%) rotate(2deg);
+}
+
+.note-star{
+  position:absolute;
+  right:20px;
+  top:18px;
+  font-size:22px;
+  color:var(--pink);
+}
+
+.github-note h3{
+  font-family:'Gochi Hand',cursive;
+  font-size:25px;
+  font-weight:400;
+  text-decoration:underline;
+  margin:0 0 10px;
+}
+
+.github-note p{
+  font-family:'Space Mono',monospace;
+  font-size:12px;
+  line-height:1.7;
+  max-width:400px;
+}
+
+.github-note a{
+  font-family:'Space Mono',monospace;
+  font-size:12px;
+  color:var(--ink);
+  text-decoration:underline;
+}
+
+/* ===== responsive ===== */
+@media (max-width:1050px){
+  .projects-grid{
+    grid-template-columns:repeat(2,1fr);
+  }
+}
+
+@media (max-width:760px){
+  .project-intro{
+    flex-direction:column;
+    align-items:flex-start;
+  }
+
+  .project-note{
+    align-self:flex-end;
+  }
+
+  .projects-grid{
+    grid-template-columns:1fr;
+  }
+
+  .project-card{
+    min-height:330px;
+  }
+}
+
+@media (prefers-reduced-motion:reduce){
+  .project-card,
+  .filter-btn{
+    transition:none;
+  }
+}

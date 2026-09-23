@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Riwayat Sekolah - Arya Wira Pratama</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Gochi+Hand&family=Caveat:wght@600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<style>
+  /* penyesuaian khusus halaman riwayat sekolah, tetap memakai style.css yang sama */
+  .timeline{
+    margin-top:44px;
+    position:relative;
+    padding-left:34px;
+  }
+  .timeline::before{
+    content:"";
+    position:absolute;
+    left:9px;
+    top:6px;
+    bottom:6px;
+    width:2px;
+    background:repeating-linear-gradient(to bottom, var(--pink) 0 6px, transparent 6px 12px);
+  }
+  .tl-item{
+    position:relative;
+    margin-bottom:38px;
+    max-width:640px;
+  }
+  .tl-item::before{
+    content:"";
+    position:absolute;
+    left:-34px;
+    top:6px;
+    width:14px;
+    height:14px;
+    border-radius:50%;
+    background:var(--paper);
+    border:2px solid var(--ink);
+  }
+  .tl-item .jenjang{
+    font-family:'Gochi Hand', cursive;
+    font-size:22px;
+    text-decoration:underline;
+    margin-bottom:6px;
+  }
+  .tl-item .tahun{
+    font-family:'Space Mono', monospace;
+    font-size:12px;
+    opacity:.6;
+    margin-bottom:10px;
+    letter-spacing:.5px;
+  }
+  .tl-item .card{
+    background:var(--pink-soft);
+    border:1.5px dashed var(--pink);
+    border-radius:6px;
+    padding:16px 20px;
+    font-family:'Space Mono', monospace;
+    font-size:13px;
+    line-height:1.7;
+    transform:rotate(-0.4deg);
+  }
+  .tl-item .card b{
+    font-family:'Gochi Hand', cursive;
+    font-size:16px;
+    font-weight:400;
+  }
+
+  @media (max-width:760px){
+    .timeline{padding-left:26px;}
+    .tl-item::before{left:-26px;}
+  }
+</style>
+</head>
+<body>
+
+<div class="window">
+
+  <div class="titlebar">
+    <div class="left">
+      <span>&#8592;&#8594;</span>
+      <span>&#10022;</span>
+    </div>
+    <div class="right">
+      <span>&#8722;</span>
+      <span>&#9633;</span>
+      <span>&#10005;</span>
+    </div>
+  </div>
+
+  <div class="content">
+
+    <!-- header -->
+    <div class="header">
+      <div class="logo reveal">
+        <div class="l1"><span>R</span><span>i</span><span>w</span><span>a</span><span>y</span>at</div>
+        <div class="l2">sekolah</div>
+        <div class="star twinkle">&#9734;</div>
+      </div>
+
+      <div class="welcome reveal">
+        a little timeline<br>
+        of how i got here <span style="font-size:20px;" class="twinkle">&#9733;</span>
+        <div style="border-bottom:2px solid #222; margin-top:6px; width:220px; margin-left:auto;"></div>
+      </div>
+    </div>
+
+    <nav>
+      <a href="index.html" class="reveal">HOME</a>
+      <a href="biodata.html" class="reveal">BIODATA</a>
+      <a href="riwayat.html" class="reveal">RIWAYAT</a>
+      <a href="projects.html" class="reveal">PROJECTS</a>
+      <a href="certificates.html" class="reveal">CERTIFICATES</a>
+    </nav>
+
+    <div class="clock">
+      <div>[ <span id="clock-time">--:--:-- --</span> ]</div>
+      <div id="clock-date">MONTH DD, YYYY</div>
+    </div>
+
+    <!-- riwayat sekolah -->
+    <div class="timeline" id="riwayat">
+
+      <div class="tl-item reveal">
+        <div class="jenjang">Taman Kanak-kanak (TK)</div>
+        <div class="tahun">2012 &ndash; 2014</div>
+        <div class="card"><b>TK Aisyiyah Muria</b><br>Ponorogo</div>
+      </div>
+
+      <div class="tl-item reveal">
+        <div class="jenjang">Sekolah Dasar (SD)</div>
+        <div class="tahun">2014 &ndash; 2018</div>
+        <div class="card"><b>SDMT</b><br>Ponorogo</div>
+      </div>
+
+      <div class="tl-item reveal">
+        <div class="jenjang">Sekolah Dasar (SD)</div>
+        <div class="tahun">2018 &ndash; 2020</div>
+        <div class="card"><b>SDIT Permata Ummat</b></div>
+      </div>
+
+      <div class="tl-item reveal">
+        <div class="jenjang">Pondok Modern (SMP &ndash; SMA/KMI)</div>
+        <div class="tahun">2020 &ndash; 2026</div>
+        <div class="card"><b>Pondok Modern Darussalam Gontor</b></div>
+      </div>
+
+      <div class="tl-item reveal">
+        <div class="jenjang">Universitas Darussalam</div>
+        <div class="tahun">2026 &ndash; sekarang</div>
+        <div class="card"><b>[ Nama Universitas ]</b><br>Teknik Informatika</div>
+      </div>
+
+    </div>
+
+    <div class="thanks reveal">thanks for visiting &#9825;</div>
+
+  </div>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
