@@ -1,11 +1,11 @@
   :root{
-    --pink:#f7a8c4;
-    --pink-soft:#ffe2ec;
-    --blue:#a9dfff;
-    --purple:#cdb3ec;
-    --yellow:#fff3a0;
-    --green:#c3f0c8;
-    --ink:#1c1c1c;
+    --pink:#e3b9bc;
+    --pink-soft:#f6e9e7;
+    --blue:#b9cdd6;
+    --purple:#cdc0d6;
+    --yellow:#ecdfc0;
+    --green:#c7d6c4;
+    --ink:#33302e;
     --paper:#fffdfa;
   }
 
@@ -376,4 +376,32 @@
 @media (prefers-reduced-motion: reduce){
   .reveal{ opacity:1; transform:none; transition:none; }
   .cursor-sparkle{ display:none; }
+}
+
+/* ===== social links ===== */
+.socials{
+  display:flex;
+  gap:14px;
+  margin-top:16px;
+}
+.socials a{
+  width:38px;
+  height:38px;
+  border-radius:50%;
+  border:1.5px solid var(--ink);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:var(--ink);
+  background:var(--paper);
+  transition:transform .15s ease, background .15s ease, color .15s ease;
+}
+.socials a svg{
+  width:18px;
+  height:18px;
+  fill:currentColor;
+}
+.socials a:hover{
+  transform:translateY(-3px) rotate(-4deg);
+  background:var(--pink);
 }
