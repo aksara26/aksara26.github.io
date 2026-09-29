@@ -1,10 +1,10 @@
   :root{
-    --pink:#e3b9bc;
-    --pink-soft:#f6e9e7;
+    --pink:#a9bfa4;
+    --pink-soft:#eef2ec;
     --blue:#b9cdd6;
     --purple:#cdc0d6;
     --yellow:#ecdfc0;
-    --green:#c7d6c4;
+    --green:#d9ac95;
     --ink:#33302e;
     --paper:#fffdfa;
   }
@@ -27,7 +27,7 @@
     background:var(--paper);
     border:3px solid var(--pink);
     border-radius:4px;
-    box-shadow:0 0 0 1px #fff, 8px 8px 0 rgba(247,168,196,0.25);
+    box-shadow:0 0 0 1px #fff, 8px 8px 0 rgba(169,191,164,0.22);
     position:relative;
     overflow:hidden;
   }
