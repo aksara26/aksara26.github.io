@@ -1,77 +1,230 @@
-/* ===== hee's space — script.js ===== */
+/* =========================================================
+   ARYA WARTA — script.js
+   Tanggal edisi, reveal, filter proyek, efek buka koran
+   ========================================================= */
 
-const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+(function () {
+  'use strict';
 
-/* ---------- jam & tanggal live ---------- */
-function pad(n){ return n.toString().padStart(2, '0'); }
+  const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-function updateClock(){
-  const now = new Date();
-  let h = now.getHours();
-  const ampm = h >= 12 ? 'PM' : 'AM';
-  h = h % 12; if (h === 0) h = 12;
-  const timeStr = pad(h) + ':' + pad(now.getMinutes()) + ':' + pad(now.getSeconds()) + ' ' + ampm;
-
-  const months = ['JAN','FEB','MAR','APR','MAY','JUN','JUL','AUG','SEP','OCT','NOV','DEC'];
-  const dateStr = months[now.getMonth()] + ' ' + now.getDate() + ', ' + now.getFullYear();
-
-  const timeEl = document.getElementById('clock-time');
-  const dateEl = document.getElementById('clock-date');
-  if (timeEl) timeEl.textContent = timeStr;
-  if (dateEl) dateEl.textContent = dateStr;
-}
-updateClock();
-setInterval(updateClock, 1000);
-
-/* ---------- cek foto berhasil dimuat ---------- */
-const portraitImg = document.querySelector('.portrait img');
-const portraitBox = document.getElementById('portrait');
-if (portraitImg && portraitBox) {
-  portraitImg.addEventListener('load',  () => portraitBox.classList.add('has-img'));
-  portraitImg.addEventListener('error', () => portraitBox.classList.remove('has-img'));
-}
-
-/* ---------- animasi masuk berurutan (stagger reveal) ---------- */
-function runRevealAnimation(){
-  const items = document.querySelectorAll('.reveal');
-  if (prefersReducedMotion) {
-    items.forEach(el => el.classList.add('revealed'));
-    return;
+  /* ---------- tanggal edisi ---------- */
+  const editionEl = document.getElementById('edition-date');
+  if (editionEl) {
+    const days = ['Ahad', 'Senen', 'Selasa', 'Rebo', 'Kemis', 'Jumat', 'Setu'];
+    const months = [
+      'Januari', 'Februari', 'Maret', 'April', 'Mei', 'Juni',
+      'Juli', 'Agustus', 'September', 'Oktober', 'November', 'Desember'
+    ];
+    const now = new Date();
+    editionEl.textContent =
+      days[now.getDay()] + ', ' + now.getDate() + ' ' +
+      months[now.getMonth()] + ' ' + now.getFullYear();
   }
-  items.forEach((el, i) => {
-    setTimeout(() => el.classList.add('revealed'), i * 65);
+
+  /* ---------- animasi reveal berurutan ---------- */
+  const revealItems = Array.from(document.querySelectorAll('.reveal'));
+
+  if (reducedMotion || !('IntersectionObserver' in window)) {
+    revealItems.forEach(function (el) { el.classList.add('is-in'); });
+  } else {
+    const observer = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (!entry.isIntersecting) return;
+        const el = entry.target;
+        const delay = Number(el.dataset.revealDelay || 0);
+        window.setTimeout(function () { el.classList.add('is-in'); }, delay);
+        observer.unobserve(el);
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+
+    revealItems.forEach(function (el, i) {
+      el.dataset.revealDelay = String(Math.min(i, 8) * 55);
+      observer.observe(el);
+    });
+  }
+
+  /* ---------- filter proyek ---------- */
+  const filterButtons = Array.from(document.querySelectorAll('.filters [data-filter]'));
+  const projectCards = Array.from(document.querySelectorAll('.projects-grid .project-card'));
+
+  if (filterButtons.length && projectCards.length) {
+    filterButtons.forEach(function (button) {
+      button.addEventListener('click', function () {
+        filterButtons.forEach(function (btn) { btn.classList.remove('active'); });
+        button.classList.add('active');
+
+        const filter = button.dataset.filter;
+
+        projectCards.forEach(function (card) {
+          const match = filter === 'all' || card.dataset.category === filter;
+          card.classList.toggle('is-hidden', !match);
+        });
+      });
+    });
+  }
+
+  /* ---------- filter kegiatan ---------- */
+  const activityButtons = Array.from(document.querySelectorAll('.activity-filters [data-activity-filter]'));
+  const activityPanels = Array.from(document.querySelectorAll('.activity-panel[data-activity]'));
+
+  if (activityButtons.length && activityPanels.length) {
+    function selectActivity(selected) {
+      const selectedButton = activityButtons.find(function (button) {
+        return button.dataset.activityFilter === selected;
+      });
+      if (!selectedButton) return;
+
+      activityButtons.forEach(function (button) {
+        const isActive = button === selectedButton;
+        button.classList.toggle('active', isActive);
+        button.setAttribute('aria-pressed', String(isActive));
+      });
+
+      activityPanels.forEach(function (panel) {
+        panel.hidden = panel.dataset.activity !== selected;
+      });
+    }
+
+    activityButtons.forEach(function (button) {
+      button.addEventListener('click', function () {
+        selectActivity(button.dataset.activityFilter);
+      });
+    });
+
+    document.querySelectorAll('a[href="#perpustakaan"]').forEach(function (link) {
+      link.addEventListener('click', function () {
+        selectActivity('perpustakaan');
+      });
+    });
+
+    window.addEventListener('hashchange', function () {
+      selectActivity(window.location.hash.slice(1));
+    });
+
+    if (window.location.hash) selectActivity(window.location.hash.slice(1));
+  }
+
+  /* ---------- pratinjau foto ---------- */
+  const lightboxTriggers = Array.from(document.querySelectorAll('[data-lightbox]'));
+
+  if (lightboxTriggers.length) {
+    const overlay = document.createElement('div');
+    overlay.className = 'lightbox';
+    overlay.setAttribute('role', 'dialog');
+    overlay.setAttribute('aria-modal', 'true');
+    overlay.setAttribute('aria-label', 'Pratinjau foto');
+    overlay.setAttribute('aria-describedby', 'lightbox-caption');
+    overlay.hidden = true;
+    overlay.innerHTML =
+      '<button type="button" class="lightbox-close" aria-label="Tutup pratinjau">&times;</button>' +
+      '<figure class="lightbox-figure">' +
+        '<img class="lightbox-img" alt="" decoding="async">' +
+        '<figcaption class="lightbox-caption" id="lightbox-caption" hidden></figcaption>' +
+      '</figure>';
+    document.body.appendChild(overlay);
+
+    const lightboxImg = overlay.querySelector('.lightbox-img');
+    const lightboxCap = overlay.querySelector('.lightbox-caption');
+    const lightboxClose = overlay.querySelector('.lightbox-close');
+    const pageSheet = document.querySelector('.sheet');
+    let lightboxReturn = null;
+
+    function openLightbox(trigger) {
+      const figure = trigger.closest('figure') || trigger.querySelector('figure');
+      const caption = figure ? figure.querySelector('figcaption') : null;
+      const thumb = trigger.querySelector('img');
+      const source = trigger.getAttribute('href');
+
+      lightboxImg.src = source;
+      lightboxImg.alt = thumb ? thumb.alt : '';
+      lightboxCap.textContent = caption
+        ? caption.textContent.replace(/\s+/g, ' ').trim()
+        : '';
+      lightboxCap.hidden = !lightboxCap.textContent;
+      lightboxReturn = trigger;
+      overlay.hidden = false;
+      document.documentElement.classList.add('lightbox-open');
+      document.body.classList.add('lightbox-open');
+      if (pageSheet) pageSheet.inert = true;
+      lightboxClose.focus();
+    }
+
+    function closeLightbox() {
+      if (overlay.hidden) return;
+      overlay.hidden = true;
+      document.documentElement.classList.remove('lightbox-open');
+      document.body.classList.remove('lightbox-open');
+      if (pageSheet) pageSheet.inert = false;
+      lightboxImg.removeAttribute('src');
+      if (lightboxReturn && typeof lightboxReturn.focus === 'function') {
+        lightboxReturn.focus();
+      }
+    }
+
+    lightboxTriggers.forEach(function (trigger) {
+      trigger.setAttribute('aria-haspopup', 'dialog');
+      trigger.addEventListener('click', function (event) {
+        if (event.button !== 0) return;
+        if (event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
+        event.preventDefault();
+        openLightbox(trigger);
+      });
+    });
+
+    lightboxClose.addEventListener('click', closeLightbox);
+    overlay.addEventListener('click', function (event) {
+      if (event.target === overlay) closeLightbox();
+    });
+    document.addEventListener('keydown', function (event) {
+      if (overlay.hidden) return;
+      if (event.key === 'Escape') {
+        event.preventDefault();
+        closeLightbox();
+      } else if (event.key === 'Tab') {
+        event.preventDefault();
+        lightboxClose.focus();
+      }
+    });
+  }
+
+  /* ---------- efek membuka/melipat koran ---------- */
+  function isInternalLink(link) {
+    if (!link) return false;
+    if (link.target === '_blank' || link.hasAttribute('download')) return false;
+    if (link.hasAttribute('data-lightbox')) return false;
+
+    const href = link.getAttribute('href');
+    if (!href) return false;
+    if (href.charAt(0) === '#') return false;
+    if (/^(https?:|mailto:|tel:|javascript:)/i.test(href)) return false;
+    if (/\.(jpe?g|png|gif|webp|avif|svg)$/i.test(href)) return false;
+
+    return true;
+  }
+
+  document.addEventListener('click', function (event) {
+    if (event.defaultPrevented) return;
+    if (event.button !== 0) return;
+    if (event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
+
+    const link = event.target.closest('a');
+    if (!isInternalLink(link)) return;
+
+    // Tanpa animasi: biarkan navigasi normal.
+    if (reducedMotion) return;
+
+    event.preventDefault();
+    const destination = link.getAttribute('href');
+
+    document.body.classList.add('is-turning');
+    window.setTimeout(function () {
+      window.location.href = destination;
+    }, 430);
   });
-}
-window.addEventListener('DOMContentLoaded', runRevealAnimation);
 
-/* ---------- kelip bintang acak (twinkle) ---------- */
-document.querySelectorAll('.twinkle').forEach(el => {
-  if (prefersReducedMotion) return;
-  const delay = (Math.random() * 2).toFixed(2);
-  const duration = (1.8 + Math.random() * 1.4).toFixed(2);
-  el.style.animation = `twinkle ${duration}s ease-in-out ${delay}s infinite`;
-});
-
-/* ---------- jejak kelip mengikuti kursor ---------- */
-if (!prefersReducedMotion && window.matchMedia('(hover: hover)').matches) {
-  const sparkleChars = ['&#10022;', '&#9733;', '&#9734;'];
-  const sparkleColors = ['#f7a8c4', '#7ec8e3', '#cdb3ec', '#f4d35e'];
-  let lastSpawn = 0;
-
-  document.addEventListener('mousemove', (e) => {
-    const now = Date.now();
-    if (now - lastSpawn < 90) return; // throttle biar tidak berat
-    lastSpawn = now;
-
-    const el = document.createElement('span');
-    el.className = 'cursor-sparkle';
-    el.innerHTML = sparkleChars[Math.floor(Math.random() * sparkleChars.length)];
-    el.style.left = e.clientX + 'px';
-    el.style.top = e.clientY + 'px';
-    el.style.color = sparkleColors[Math.floor(Math.random() * sparkleColors.length)];
-    el.style.setProperty('--dx', (Math.random() * 30 - 15) + 'px');
-
-    document.body.appendChild(el);
-    el.addEventListener('animationend', () => el.remove());
+  // Jika kembali lewat tombol back, pastikan halaman tidak tertinggal dalam keadaan gelap.
+  window.addEventListener('pageshow', function () {
+    document.body.classList.remove('is-turning');
   });
-}
+})();

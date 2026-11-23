@@ -1,167 +1,242 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Riwayat Sekolah - Arya Wira Pratama</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Gochi+Hand&family=Caveat:wght@600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
-<style>
-  /* penyesuaian khusus halaman riwayat sekolah, tetap memakai style.css yang sama */
-  .timeline{
-    margin-top:44px;
-    position:relative;
-    padding-left:34px;
-  }
-  .timeline::before{
-    content:"";
-    position:absolute;
-    left:9px;
-    top:6px;
-    bottom:6px;
-    width:2px;
-    background:repeating-linear-gradient(to bottom, var(--pink) 0 6px, transparent 6px 12px);
-  }
-  .tl-item{
-    position:relative;
-    margin-bottom:38px;
-    max-width:640px;
-  }
-  .tl-item::before{
-    content:"";
-    position:absolute;
-    left:-34px;
-    top:6px;
-    width:14px;
-    height:14px;
-    border-radius:50%;
-    background:var(--paper);
-    border:2px solid var(--ink);
-  }
-  .tl-item .jenjang{
-    font-family:'Gochi Hand', cursive;
-    font-size:22px;
-    text-decoration:underline;
-    margin-bottom:6px;
-  }
-  .tl-item .tahun{
-    font-family:'Space Mono', monospace;
-    font-size:12px;
-    opacity:.6;
-    margin-bottom:10px;
-    letter-spacing:.5px;
-  }
-  .tl-item .card{
-    background:var(--pink-soft);
-    border:1.5px dashed var(--pink);
-    border-radius:6px;
-    padding:16px 20px;
-    font-family:'Space Mono', monospace;
-    font-size:13px;
-    line-height:1.7;
-    transform:rotate(-0.4deg);
-  }
-  .tl-item .card b{
-    font-family:'Gochi Hand', cursive;
-    font-size:16px;
-    font-weight:400;
-  }
-
-  @media (max-width:760px){
-    .timeline{padding-left:26px;}
-    .tl-item::before{left:-26px;}
-  }
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lelakon — Arya Warta</title>
+  <meta name="description" content="Catatan kegiatan lan pangalaman Arya Wira Pratama, wiwit ngajar TPA nganti lelaku bebarengan.">
+  <meta name="author" content="Arya Wira Pratama">
+  <meta name="theme-color" content="#E9DDC0">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Arya Warta">
+  <meta property="og:locale" content="id_ID">
+  <meta property="og:title" content="Lelakon — Arya Warta">
+  <meta property="og:description" content="Catatan kegiatan lan pangalaman Arya Wira Pratama, wiwit ngajar TPA nganti lelaku bebarengan.">
+  <meta property="og:image" content="TPA.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Lelakon — Arya Warta">
+  <meta name="twitter:description" content="Catatan kegiatan lan pangalaman Arya Wira Pratama, wiwit ngajar TPA nganti lelaku bebarengan.">
+  <meta name="twitter:image" content="TPA.jpg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,400..900&family=Courier+Prime:wght@400;700&family=EB+Garamond:ital,wght@0,400;0,600;1,400&family=Grenze+Gotisch:wght@100..900&family=Noto+Sans+Javanese:wght@400;700&family=Pinyon+Script&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <noscript><style>.reveal{opacity:1;transform:none}</style></noscript>
 </head>
 <body>
+<a class="skip-link" href="#main">Langsung ke isi</a>
+<div class="page-shadow" aria-hidden="true"></div>
 
-<div class="window">
+<div class="sheet">
 
-  <div class="titlebar">
-    <div class="left">
-      <span>&#8592;&#8594;</span>
-      <span>&#10022;</span>
+  <header class="masthead">
+    <div class="masthead-meta">
+      <span>Taun I &middot; No. 08</span>
+      <span id="edition-date">Ngemot tanggal&hellip;</span>
+      <span>Ponorogo &middot; Jawa Wetan</span>
     </div>
-    <div class="right">
-      <span>&#8722;</span>
-      <span>&#9633;</span>
-      <span>&#10005;</span>
-    </div>
-  </div>
-
-  <div class="content">
-
-    <!-- header -->
-    <div class="header">
-      <div class="logo reveal">
-        <div class="l1"><span>R</span><span>i</span><span>w</span><span>a</span><span>y</span>at</div>
-        <div class="l2">sekolah</div>
-        <div class="star twinkle">&#9734;</div>
-      </div>
-
-      <div class="welcome reveal">
-        a little timeline<br>
-        of how i got here <span style="font-size:20px;" class="twinkle">&#9733;</span>
-        <div style="border-bottom:2px solid #222; margin-top:6px; width:220px; margin-left:auto;"></div>
-      </div>
-    </div>
-
-    <nav>
-      <a href="index.html" class="reveal">HOME</a>
-      <a href="biodata.html" class="reveal">BIODATA</a>
-      <a href="riwayat.html" class="reveal">RIWAYAT</a>
-      <a href="projects.html" class="reveal">PROJECTS</a>
-      <a href="certificates.html" class="reveal">CERTIFICATES</a>
+    <div class="masthead-rule"></div>
+    <p class="masthead-kicker">Kabar Karya lan Lelampahan</p>
+    <h1 class="masthead-title"><a href="index.html">Arya Warta</a></h1>
+    <p class="masthead-jawa" lang="jv" aria-hidden="true">ꦄꦂꦪꦮꦂꦠ</p>
+    <p class="masthead-tagline">Arya Wira Pratama &middot; edisi digital</p>
+    <nav class="masthead-nav" aria-label="Navigasi utama">
+      <a href="index.html" title="Beranda">Ngarep</a>
+      <a href="biodata.html" title="Biodata">Biodata</a>
+      <a href="riwayat.html" aria-current="page" title="Riwayat">Lelakon</a>
+      <a href="projects.html" title="Proyek">Karya</a>
+      <a href="catatan.html" title="Catatan">Catatan</a>
+      <a href="certificates.html" title="Sertifikat">Piagam</a>
     </nav>
+  </header>
 
-    <div class="clock">
-      <div>[ <span id="clock-time">--:--:-- --</span> ]</div>
-      <div id="clock-date">MONTH DD, YYYY</div>
+  <main class="page-shell" id="main" tabindex="-1">
+
+    <div class="page-head reveal">
+      <p class="kicker">Kegiatan &amp; Pangalaman</p>
+      <h2 class="page-title">Lelakon</h2>
+      <p class="page-dek">
+        Cathetan kegiatan Arya minangka pengajar TPA lan staff IT Perpustakaan
+        UNIDA Gontor.
+      </p>
     </div>
 
-    <!-- riwayat sekolah -->
-    <div class="timeline" id="riwayat">
-
-      <div class="tl-item reveal">
-        <div class="jenjang">Taman Kanak-kanak (TK)</div>
-        <div class="tahun">2012 &ndash; 2014</div>
-        <div class="card"><b><a href="https://sekolah.data.kemendikdasmen.go.id/profil-sekolah/39AFE497-0786-4C1B-9FA5-4DBA16BEB6A7">TK Aisyiyah Muria</a></b><br>Ponorogo</div>
+    <section class="section section-flush reveal" aria-labelledby="kegiatan-heading">
+      <div class="section-head">
+        <h2 id="kegiatan-heading">Kegiatan &amp; Pangalaman</h2>
       </div>
 
-      <div class="tl-item reveal">
-        <div class="jenjang">Sekolah Dasar (SD)</div>
-        <div class="tahun">2014 &ndash; 2018</div>
-        <div class="card"><b><a href="https://sdmtponorogo.com/">SDMT</a></b><br>Ponorogo</div>
-      </div>
+      <ol class="timeline">
+        <li class="reveal">
+          <span class="tl-year">2026 &ndash; saiki</span>
+          <div>
+            <h3><a href="#tpa">Pengajar TPA Al-Kholifah</a></h3>
+            <p>Ngajar lan ndampingi bocah-bocah TPA Al-Kholifah sinambi ngudi pawiyatan luhur Teknik Informatika.</p>
+          </div>
+        </li>
+        <li class="reveal">
+          <span class="tl-year">Saiki</span>
+          <div>
+            <h3><a href="#perpustakaan">Staff IT Perpustakaan UNIDA Gontor</a></h3>
+            <p>Kegiatan lan dokumentasi bebarengan karo tim perpustakaan.</p>
+          </div>
+        </li>
+      </ol>
+    </section>
 
-      <div class="tl-item reveal">
-        <div class="jenjang">Sekolah Dasar (SD)</div>
-        <div class="tahun">2018 &ndash; 2020</div>
-        <div class="card"><b><a href="https://sekolah.data.kemendikdasmen.go.id/profil-sekolah/E0A09AB8-8C18-E111-93E4-7B7A5BDF6CBA">SDIT Permata Ummat</a></b></div>
-      </div>
-
-      <div class="tl-item reveal">
-        <div class="jenjang">Pondok Modern (SMP &ndash; SMA/KMI)</div>
-        <div class="tahun">2020 &ndash; 2026</div>
-        <div class="card"><b><a href="https://gontor.ac.id/">Pondok Modern Darussalam Gontor</a></b></div>
-      </div>
-
-     <div class="tl-item reveal">
-        <div class="jenjang">Universitas Darussalam</div>
-        <div class="tahun">2026 &ndash; sekarang</div>
-        <div class="card"><b><a href="https://gontor.ac.id/universitas-darussalam-gontor/">[ Universitas Darussalam ]</a></b><br>Teknik Informatika</div>
-      </div>  
-
+    <div class="filters activity-filters reveal" role="group" aria-label="Pilih kegiatan">
+      <button type="button" class="active" data-activity-filter="tpa" aria-pressed="true">TPA</button>
+      <button type="button" data-activity-filter="perpustakaan" aria-pressed="false">Perpustakaan</button>
     </div>
 
-    <div class="thanks reveal">thanks for visiting &#9825;</div>
+    <!-- ===== LELAKON TPA ===== -->
+    <section class="section reveal activity-panel" id="tpa" data-activity="tpa">
+      <div class="section-head">
+        <h2>Lelakon TPA</h2>
+      </div>
 
-  </div>
+      <div class="tpa-grid">
+        <figure class="photo">
+          <a class="lightbox-trigger" href="TPA.jpg" data-lightbox aria-label="Perbesar foto pengajar TPA Al-Kholifah">
+            <div class="halftone">
+              <img src="TPA.jpg" alt="Para ustadz pengajar TPA Al-Kholifah" width="960" height="960" loading="lazy" decoding="async">
+            </div>
+          </a>
+          <figcaption>
+            Ustadz-ustadz pengajar TPA Al-Kholifah yang ikhlas mengajari
+            anak-anak TPA. Foto: dokumentasi TPA Al-Kholifah.
+          </figcaption>
+        </figure>
+
+        <div class="tpa-copy">
+          <p class="tpa-lead">
+            Di sela jadwal kuliah Teknik Informatika, Arya turut mengabdi
+            sebagai pengajar di TPA Al-Kholifah. Ia datang bukan sebagai guru
+            yang serba tahu, melainkan sebagai kawan belajar yang lebih dulu
+            menempuh jalan.
+          </p>
+          <p>
+            Bersama para ustadz pengajar TPA Al-Kholifah, ia menyiapkan materi
+            sederhana untuk anak-anak: mengenal huruf, membaca, menulis, dan
+            dasar-dasar ilmu agama. Tidak setiap hari berjalan mulus. Ada anak
+            yang cepat menangkap pelajaran, ada pula yang perlu diulang
+            berkali-kali. Di sinilah kesabaran diuji, dan di sinilah para
+            ustadz menunjukkan cara mengajar dengan ikhlas.
+          </p>
+          <p>
+            Keikhlasan itu terasa dalam hal-hal kecil: datang lebih awal,
+            menyapa anak-anak satu per satu, mengulang penjelasan tanpa
+            mengeluh, dan tetap tersenyum ketika kelas kembali riuh. Para
+            ustadz tidak selalu mendapat sorotan, tetapi kerja mereka menjadi
+            fondasi bagi anak-anak yang sedang tumbuh.
+          </p>
+          <p>
+            Bagi Arya, TPA Al-Kholifah adalah ruang belajar dua arah. Ia
+            mengajar, tetapi sekaligus belajar sabar, ikhlas, dan konsisten.
+            Pengalaman ini menjadi salah satu bagian paling berharga dalam
+            catatan Lelakon ini &mdash; bukti bahwa karya tidak selalu
+            berbentuk kode, tetapi juga waktu yang dibagikan untuk orang lain.
+          </p>
+        </div>
+      </div>
+
+      <div class="subsection" id="renang">
+        <h3 class="subsection-title">Lelaku Renang ing Tirto Joyo</h3>
+        <p class="section-date">14 November 2026 &middot; Tirto Joyo</p>
+
+        <div class="renang-gallery">
+          <figure class="photo">
+            <a class="lightbox-trigger" href="renang.jpeg" data-lightbox aria-label="Perbesar foto renang di Tirto Joyo">
+              <div class="halftone">
+                <img src="renang.jpeg" alt="Suasana renang bersama TPA Al-Kholifah di Tirto Joyo"
+                     width="3024" height="4032" loading="lazy" decoding="async">
+              </div>
+            </a>
+            <figcaption>
+              Para ustadz, ustadzah, dan anak-anak TPA Al-Kholifah ing Tirto Joyo.
+            </figcaption>
+          </figure>
+
+          <figure class="photo">
+            <a class="lightbox-trigger" href="renang.1.jpeg" data-lightbox aria-label="Perbesar foto keceriaan anak-anak TPA Al-Kholifah">
+              <div class="halftone">
+                <img src="renang.1.jpeg" alt="Keceriaan anak-anak TPA Al-Kholifah di kolam Tirto Joyo"
+                     width="4032" height="3024" loading="lazy" decoding="async">
+              </div>
+            </a>
+            <figcaption>
+              Kabungahan ing blumbang renang &mdash; 14 November 2026.
+              Foto: dokumentasi TPA Al-Kholifah.
+            </figcaption>
+          </figure>
+        </div>
+
+        <div class="editorial-body">
+          <p>
+            Tanggal 14 November 2026, para ustadz, ustadzah, lan bocah-bocah
+            TPA Al-Kholifah tindak sesarengan menyang blumbang renang Tirto
+            Joyo. Lelaku cilik iki dadi jeda sing nyenengake saka rutinitas
+            sinau: sakeplasan ngaso, dolanan banyu, lan ngrasakake wektu
+            bebarengan.
+          </p>
+          <p>
+            Tumrap bocah-bocah, blumbang renang dadi papan petualangan. Ana
+            sing langsung mlumpat kanthi bungah, ana uga sing isih ragu lan
+            nyekel tangan ustadz utawa ustadzah. Para pengajar ndampingi siji
+            mbaka siji, njaga supaya kabeh tetep aman, lan sok-sok mulang
+            gerakan dhasar nglangi.
+          </p>
+          <p>
+            Ing mburine guyu lan cipratan banyu, ana piwulang sing ora tinulis
+            ing papan tulis: wani, percaya, lan kebersamaan. Lelaku iki Arya
+            cathet minangka perangan saka Lelakon TPA Al-Kholifah &mdash;
+            dudu mung rekreasi, nanging uga cara liya kanggo ndampingi
+            bocah-bocah tuwuh.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section reveal activity-panel" id="perpustakaan" data-activity="perpustakaan" hidden>
+      <div class="section-head">
+        <h2>Lelakon Perpustakaan UNIDA Gontor</h2>
+      </div>
+
+      <div class="tpa-grid">
+        <figure class="photo">
+          <a class="lightbox-trigger" href="kumpulPerpus.jpeg" data-lightbox aria-label="Perbesar foto kegiatan Perpustakaan UNIDA Gontor">
+            <div class="halftone">
+              <img src="kumpulPerpus.jpeg" alt="Kegiatan bersama tim di Perpustakaan UNIDA Gontor"
+                   width="1280" height="722" loading="lazy" decoding="async">
+            </div>
+          </a>
+          <figcaption>Kegiatan bersama tim di Perpustakaan UNIDA Gontor. Foto: dokumentasi pribadi.</figcaption>
+        </figure>
+
+        <div class="tpa-copy">
+          <p class="tpa-lead">
+            Arya bertugas sebagai staff IT Perpustakaan UNIDA Gontor.
+          </p>
+          <p>
+            Peran ini menjadi bagian dari perjalanan Arya di bidang teknologi
+            informasi. Foto ini mendokumentasikan kegiatan bersama tim
+            perpustakaan; catatan kegiatan lainnya dapat ditambahkan di sini
+            seiring perjalanan berlangsung.
+          </p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="colophon">
+    <span>&copy; 2026 Arya Wira Pratama</span>
+    <span>Dicithak ing Trenggalek &middot; Ditenagai HTML, CSS &amp; JavaScript</span>
+  </footer>
+
 </div>
 
 <script src="script.js"></script>
-
 </body>
 </html>

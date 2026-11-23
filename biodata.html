@@ -1,203 +1,164 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Biodata Arya Wira Pratama</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Gochi+Hand&family=Caveat:wght@600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style-biodata.css">
-<style>
-  /* penyesuaian khusus halaman biodata, tetap memakai style.css yang sama */
-  .biodata-wrap{
-    display:grid;
-    grid-template-columns:280px 1fr;
-    gap:40px;
-    margin-top:40px;
-    align-items:start;
-  }
-  .biodata-photo{
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-    gap:16px;
-  }
-  .biodata-photo .portrait{
-    width:100%;
-    max-width:260px;
-  }
-  .id-tag{
-    font-family:'Gochi Hand', cursive;
-    font-size:18px;
-    border:1.5px solid var(--ink);
-    border-radius:8px;
-    padding:8px 18px;
-    transform:rotate(-2deg);
-    background:var(--pink-soft);
-  }
-
-  .biodata-table{
-    width:100%;
-    border-collapse:collapse;
-    font-family:'Space Mono', monospace;
-    font-size:14px;
-  }
-  .biodata-table tr{
-    border-bottom:1px dashed #c9c4bc;
-  }
-  .biodata-table td{
-    padding:12px 10px;
-    vertical-align:top;
-  }
-  .biodata-table td:first-child{
-    width:150px;
-    font-family:'Gochi Hand', cursive;
-    font-size:17px;
-    color:var(--ink);
-    opacity:.85;
-  }
-  .biodata-table td:nth-child(2){
-    opacity:.5;
-    width:14px;
-  }
-
-  .motto-box{
-    margin-top:28px;
-    border:1.5px dashed var(--pink);
-    border-radius:6px;
-    padding:20px 22px;
-    font-family:'Space Mono', monospace;
-    font-size:13px;
-    font-style:italic;
-    line-height:1.8;
-    background:var(--pink-soft);
-    transform:rotate(-0.6deg);
-  }
-  .motto-box .quote-mark{
-    font-family:'Caveat', cursive;
-    font-size:30px;
-    color:var(--pink);
-    display:block;
-    line-height:.5;
-    margin-bottom:10px;
-  }
-
-  @media (max-width:760px){
-    .biodata-wrap{grid-template-columns:1fr;}
-  }
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Biodata — Arya Warta</title>
+  <meta name="description" content="Biodata dan data diri Arya Wira Pratama.">
+  <meta name="author" content="Arya Wira Pratama">
+  <meta name="theme-color" content="#E9DDC0">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Arya Warta">
+  <meta property="og:locale" content="id_ID">
+  <meta property="og:title" content="Biodata — Arya Warta">
+  <meta property="og:description" content="Biodata dan data diri Arya Wira Pratama.">
+  <meta property="og:image" content="your-photo.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Biodata — Arya Warta">
+  <meta name="twitter:description" content="Biodata dan data diri Arya Wira Pratama.">
+  <meta name="twitter:image" content="your-photo.jpg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,400..900&family=Courier+Prime:wght@400;700&family=EB+Garamond:ital,wght@0,400;0,600;1,400&family=Grenze+Gotisch:wght@100..900&family=Noto+Sans+Javanese:wght@400;700&family=Pinyon+Script&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <noscript><style>.reveal{opacity:1;transform:none}</style></noscript>
 </head>
 <body>
+<a class="skip-link" href="#main">Langsung ke isi</a>
+<div class="page-shadow" aria-hidden="true"></div>
 
-<div class="window">
+<div class="sheet">
 
-  <div class="titlebar">
-    <div class="left">
-      <span>&#8592;&#8594;</span>
-      <span>&#10022;</span>
+  <header class="masthead">
+    <div class="masthead-meta">
+      <span>Taun I &middot; No. 08</span>
+      <span id="edition-date">Ngemot tanggal&hellip;</span>
+      <span>Ponorogo &middot; Jawa Wetan</span>
     </div>
-    <div class="right">
-      <span>&#8722;</span>
-      <span>&#9633;</span>
-      <span>&#10005;</span>
-    </div>
-  </div>
-
-  <div class="content">
-
-    <!-- header -->
-    <div class="header">
-      <div class="logo reveal">
-        <div class="l1"><span>B</span><span>i</span><span>o</span></div>
-        <div class="l2">data</div>
-        <div class="star twinkle">&#9734;</div>
-      </div>
-
-      <div class="welcome reveal">
-        get to know<br>
-        the person behind <span style="font-size:20px;" class="twinkle">&#9733;</span>
-        <div style="border-bottom:2px solid #222; margin-top:6px; width:220px; margin-left:auto;"></div>
-      </div>
-    </div>
-
-    <nav>
-      <a href="index.html" class="reveal">HOME</a>
-      <a href="biodata.html" class="reveal">BIODATA</a>
-      <a href="riwayat.html" class="reveal">RIWAYAT</a>
-      <a href="projects.html" class="reveal">PROJECTS</a>
-      <a href="certificates.html" class="reveal">CERTIFICATES</a>
+    <div class="masthead-rule"></div>
+    <p class="masthead-kicker">Kabar Karya lan Lelampahan</p>
+    <h1 class="masthead-title"><a href="index.html">Arya Warta</a></h1>
+    <p class="masthead-jawa" lang="jv" aria-hidden="true">ꦄꦂꦪꦮꦂꦠ</p>
+    <p class="masthead-tagline">Arya Wira Pratama &middot; edisi digital</p>
+    <nav class="masthead-nav" aria-label="Navigasi utama">
+      <a href="index.html" title="Beranda">Ngarep</a>
+      <a href="biodata.html" aria-current="page" title="Biodata">Biodata</a>
+      <a href="riwayat.html" title="Riwayat">Lelakon</a>
+      <a href="projects.html" title="Proyek">Karya</a>
+      <a href="catatan.html" title="Catatan">Catatan</a>
+      <a href="certificates.html" title="Sertifikat">Piagam</a>
     </nav>
+  </header>
 
-    <div class="clock">
-      <div>[ <span id="clock-time">--:--:-- --</span> ]</div>
-      <div id="clock-date">MONTH DD, YYYY</div>
+  <main class="page-shell" id="main" tabindex="-1">
+
+    <div class="page-head reveal">
+      <p class="kicker">Bab Diri</p>
+      <h2 class="page-title">Biodata</h2>
+      <p class="page-dek">
+        Kartu identitas redaksi &mdash; data diri, lelakon pawiyatan, kareman,
+        lan kanal resmi.
+      </p>
     </div>
 
-    <!-- biodata -->
-    <div class="biodata-wrap" id="biodata">
+    <div class="bio-grid">
 
-      <div class="biodata-photo reveal">
-        <div class="portrait has-img" id="portrait">
-          <img src="your-photo.jpg" alt="foto biodata">
-        </div>
-        <div class="id-tag">Mahasiswa &middot; Pengajar TPA</div>
-      </div>
+      <figure class="photo reveal">
+        <a class="lightbox-trigger" href="your-photo.jpg" data-lightbox aria-label="Perbesar foto Arya Wira Pratama">
+          <div class="halftone">
+            <img src="your-photo.jpg" alt="Foto Arya Wira Pratama" width="1080" height="1342" loading="lazy" decoding="async">
+          </div>
+        </a>
+        <figcaption>Foto: dokumentasi pribadi. Arya Wira Pratama.</figcaption>
+      </figure>
 
-      <div class="biodata-info reveal">
-        <table class="biodata-table">
-          <tr>
-            <td>Nama Lengkap</td><td>:</td><td>Arya Wira Pratama</td>
-          </tr>
-          <tr>
-            <td>Tahun Lahir</td><td>:</td><td>2008</td>
-          </tr>
-          <tr>
-            <td>Domisili</td><td>:</td><td>Trenggalek</td>
-          </tr>
-          <tr>
-            <td>Status</td><td>:</td><td>Mahasiswa</td>
-          </tr>
-          <tr>
-            <td>Kegiatan</td><td>:</td><td>Pengajar TPA</td>
-          </tr>
-          <tr>
-            <td>Hobi</td><td>:</td><td>Music, Coding, Running</td>
-          </tr>
-          <tr>
-            <td>Instagram</td><td>:</td><td><a href="https://www.instagram.com/aryas.note/" target="_blank" rel="noopener">@aryas.note</a></td>
-          </tr>
-          <tr>
-            <td>GitHub</td><td>:</td><td><a href="https://github.com/aksara26" target="_blank" rel="noopener">aksara26</a></td>
-          </tr>
+      <div class="reveal">
+        <table class="bio-table">
+          <tr><th>Nama Jangkep</th><td>Arya Wira Pratama</td></tr>
+          <tr><th>Taun Lair</th><td>2008</td></tr>
+          <tr><th>Domisili</th><td>Trenggalek, Jawa Timur</td></tr>
+          <tr><th>Status</th><td>Mahasiswa</td></tr>
+          <tr><th>Kegiatan</th><td>Staff IT Perpustakaan UNIDA Gontor &amp; pengajar TPA</td></tr>
+          <tr><th>Kareman</th><td>Music, Coding, Running</td></tr>
+          <tr><th>Fokus</th><td>Web &amp; Pemrograman</td></tr>
+          <tr><th>Instagram</th><td><a href="https://www.instagram.com/aryas.note/" target="_blank" rel="noopener">@aryas.note</a></td></tr>
+          <tr><th>GitHub</th><td><a href="https://github.com/aksara26" target="_blank" rel="noopener">aksara26</a></td></tr>
         </table>
 
-        <div class="motto-box">
-          <span class="quote-mark">&ldquo;</span>
-          Dunia tidak pernah benar-benar kehilangan jejak. Kebaikan meninggalkan
-          cahaya yang kelak kembali menerangi langkahmu; kejahatan meninggalkan
-          bayang-bayang yang suatu hari akan mengejarmu&mdash;barangkali seratus
-          kali lebih panjang dari bayangan yang kau tinggalkan.
-        </div>
-
-        <div class="socials" style="margin-top:24px;">
-          <a href="https://www.instagram.com/aryas.note/" target="_blank" rel="noopener" aria-label="Instagram">
-            <svg viewBox="0 0 24 24"><path d="M12 2.2c3.2 0 3.6 0 4.85.07 1.17.05 1.97.24 2.43.4a4.9 4.9 0 0 1 1.77 1.15 4.9 4.9 0 0 1 1.15 1.77c.16.46.35 1.26.4 2.43.06 1.25.07 1.65.07 4.85s-.01 3.6-.07 4.85c-.05 1.17-.24 1.97-.4 2.43a4.9 4.9 0 0 1-1.15 1.77 4.9 4.9 0 0 1-1.77 1.15c-.46.16-1.26.35-2.43.4-1.25.06-1.65.07-4.85.07s-3.6-.01-4.85-.07c-1.17-.05-1.97-.24-2.43-.4a4.9 4.9 0 0 1-1.77-1.15 4.9 4.9 0 0 1-1.15-1.77c-.16-.46-.35-1.26-.4-2.43C2.21 15.6 2.2 15.2 2.2 12s.01-3.6.07-4.85c.05-1.17.24-1.97.4-2.43A4.9 4.9 0 0 1 3.82 3c.5-.5 1.06-.9 1.77-1.15.46-.16 1.26-.35 2.43-.4C9.27 2.21 9.67 2.2 12 2.2Zm0 1.8c-3.15 0-3.52.01-4.76.07-.96.04-1.48.2-1.82.33-.46.18-.78.4-1.13.74-.34.35-.56.67-.74 1.13-.13.34-.29.86-.33 1.82C3.16 8.33 3.15 8.7 3.15 12s.01 3.67.07 4.91c.04.96.2 1.48.33 1.82.18.46.4.78.74 1.13.35.34.67.56 1.13.74.34.13.86.29 1.82.33 1.24.06 1.61.07 4.76.07s3.52-.01 4.76-.07c.96-.04 1.48-.2 1.82-.33.46-.18.78-.4 1.13-.74.34-.35.56-.67.74-1.13.13-.34.29-.86.33-1.82.06-1.24.07-1.61.07-4.91s-.01-3.67-.07-4.91c-.04-.96-.2-1.48-.33-1.82a3.1 3.1 0 0 0-.74-1.13 3.1 3.1 0 0 0-1.13-.74c-.34-.13-.86-.29-1.82-.33C15.52 4.01 15.15 4 12 4Zm0 3.15a4.85 4.85 0 1 1 0 9.7 4.85 4.85 0 0 1 0-9.7Zm0 1.8a3.05 3.05 0 1 0 0 6.1 3.05 3.05 0 0 0 0-6.1Zm5.04-2a1.13 1.13 0 1 1 0 2.27 1.13 1.13 0 0 1 0-2.27Z"/></svg>
-          </a>
-          <a href="https://github.com/aksara26" target="_blank" rel="noopener" aria-label="GitHub">
-            <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.58 2 12.2c0 4.5 2.87 8.32 6.84 9.67.5.1.68-.22.68-.49 0-.24-.01-1.04-.01-1.88-2.78.51-3.5-.7-3.72-1.34-.13-.33-.68-1.34-1.16-1.62-.4-.22-.97-.75-.01-.77.9-.01 1.54.84 1.75 1.18 1.03 1.75 2.67 1.26 3.32.96.1-.76.4-1.26.73-1.55-2.55-.3-5.23-1.31-5.23-5.82 0-1.28.44-2.34 1.17-3.16-.12-.3-.51-1.5.11-3.12 0 0 .96-.31 3.14 1.2a10.5 10.5 0 0 1 5.72 0c2.18-1.51 3.14-1.2 3.14-1.2.62 1.62.23 2.82.11 3.12.73.82 1.17 1.87 1.17 3.16 0 4.52-2.69 5.51-5.25 5.81.41.37.78 1.09.78 2.2 0 1.59-.01 2.87-.01 3.26 0 .27.18.6.69.49A10.2 10.2 0 0 0 22 12.2C22 6.58 17.52 2 12 2Z"/></svg>
-          </a>
-        </div>
+        <div class="id-stamp">Mahasiswa &middot; Staff IT Perpustakaan &middot; Pengajar TPA</div>
       </div>
 
     </div>
 
-    <div class="thanks reveal">thanks for visiting &#9825;</div>
+    <section class="section reveal" aria-labelledby="pawiyatan-heading">
+      <div class="section-head">
+        <h2 id="pawiyatan-heading">Lelakon Pawiyatan</h2>
+      </div>
 
-  </div>
+      <ol class="timeline">
+        <li class="reveal">
+          <span class="tl-year">2012 &ndash; 2014</span>
+          <div>
+            <h3>TK Aisyiyah Muria</h3>
+            <p>Ponorogo &mdash; wiwitan sinau ing pawiyatan kanak-kanak.</p>
+          </div>
+        </li>
+
+        <li class="reveal">
+          <span class="tl-year">2014 &ndash; 2018</span>
+          <div>
+            <h3><a href="https://sdmtponorogo.com/" target="_blank" rel="noopener">SDMT</a></h3>
+            <p>Ponorogo &mdash; ngleksanani pawiyatan dhasar.</p>
+          </div>
+        </li>
+
+        <li class="reveal">
+          <span class="tl-year">2018 &ndash; 2020</span>
+          <div>
+            <h3><a href="https://sekolah.data.kemendikdasmen.go.id/profil-sekolah/E0A09AB8-8C18-E111-93E4-7B7A5BDF6CBA" target="_blank" rel="noopener">SDIT Permata Ummat</a></h3>
+            <p>Nglajengake pawiyatan dhasar.</p>
+          </div>
+        </li>
+
+        <li class="reveal">
+          <span class="tl-year">2020 &ndash; 2026</span>
+          <div>
+            <h3><a href="https://gontor.ac.id/" target="_blank" rel="noopener">Pondok Modern Darussalam Gontor</a></h3>
+            <p>Pawiyatan menengah (SMP &ndash; SMA/KMI) ing pesantren.</p>
+          </div>
+        </li>
+
+        <li class="reveal">
+          <span class="tl-year">2026 &ndash; saiki</span>
+          <div>
+            <h3><a href="https://gontor.ac.id/universitas-darussalam-gontor/" target="_blank" rel="noopener">Universitas Darussalam Gontor</a></h3>
+            <p>Nglajengake pawiyatan luhur, jurusan Teknik Informatika.</p>
+          </div>
+        </li>
+      </ol>
+    </section>
+
+    <blockquote class="motto reveal">
+      <p class="script">
+        &ldquo;Dunia tidak pernah benar-benar kehilangan jejak. Kebaikan
+        meninggalkan cahaya yang kelak kembali menerangi langkahmu; kejahatan
+        meninggalkan bayang-bayang yang suatu hari akan mengejarmu &mdash;
+        barangkali seratus kali lebih panjang dari bayangan yang kau
+        tinggalkan.&rdquo;
+      </p>
+      <cite>Sesanti pribadi &mdash; Arya Wira Pratama</cite>
+    </blockquote>
+
+  </main>
+
+  <footer class="colophon">
+    <span>&copy; 2026 Arya Wira Pratama</span>
+    <span>Dicithak ing Trenggalek &middot; Ditenagai HTML, CSS &amp; JavaScript</span>
+  </footer>
+
 </div>
 
-<script src="script-biodata.js"></script>
-
+<script src="script.js"></script>
 </body>
 </html>

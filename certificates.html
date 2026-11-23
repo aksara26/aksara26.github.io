@@ -1,51 +1,87 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Certificates - Arya Wira Pratama</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Gochi+Hand&family=Caveat:wght@600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
-<style>
-.cert-intro{margin-top:42px;display:flex;justify-content:space-between;gap:30px;align-items:end;}
-.cert-intro h1{font-family:'Gochi Hand',cursive;font-size:34px;font-weight:400;margin:7px 0;}
-.cert-intro p{max-width:650px;font-size:13px;line-height:1.8;}
-.tiny-label{font-size:11px;letter-spacing:2px;opacity:.6;}
-.cert-note{background:var(--yellow);padding:18px 22px;font-family:'Gochi Hand',cursive;font-size:20px;transform:rotate(2deg);box-shadow:3px 4px 0 rgba(0,0,0,.1);}
-.cert-grid{margin-top:38px;display:grid;grid-template-columns:repeat(2,1fr);gap:24px;}
-.cert-card{background:var(--paper);border:1.5px dashed var(--pink);padding:24px;border-radius:7px;box-shadow:3px 4px 0 rgba(0,0,0,.08);transform:rotate(-.5deg);}
-.cert-card:nth-child(even){background:var(--blue);transform:rotate(.6deg);}
-.cert-number{font-size:11px;opacity:.55;letter-spacing:2px;}
-.cert-card h2{font-family:'Gochi Hand',cursive;font-size:25px;font-weight:400;margin:12px 0 5px;}
-.cert-card .issuer{font-size:12px;opacity:.7;margin-bottom:14px;}
-.cert-card p{font-size:13px;line-height:1.7;}
-.cert-status{display:inline-block;margin-top:15px;padding:5px 9px;border:1px solid var(--ink);font-size:10px;letter-spacing:1px;background:var(--pink-soft);}
-.cert-footer{margin-top:35px;text-align:center;font-family:'Gochi Hand',cursive;font-size:20px;}
-@media(max-width:760px){.cert-intro{display:block}.cert-note{display:inline-block;margin-top:18px}.cert-grid{grid-template-columns:1fr;}}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Piagam — Arya Warta</title>
+  <meta name="description" content="Arsip sertifikat dan pencapaian Arya Wira Pratama.">
+  <meta name="author" content="Arya Wira Pratama">
+  <meta name="theme-color" content="#E9DDC0">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Arya Warta">
+  <meta property="og:locale" content="id_ID">
+  <meta property="og:title" content="Piagam — Arya Warta">
+  <meta property="og:description" content="Arsip sertifikat dan pencapaian Arya Wira Pratama.">
+  <meta property="og:image" content="your-photo.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Piagam — Arya Warta">
+  <meta name="twitter:description" content="Arsip sertifikat dan pencapaian Arya Wira Pratama.">
+  <meta name="twitter:image" content="your-photo.jpg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,400..900&family=Courier+Prime:wght@400;700&family=EB+Garamond:ital,wght@0,400;0,600;1,400&family=Grenze+Gotisch:wght@100..900&family=Noto+Sans+Javanese:wght@400;700&family=Pinyon+Script&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <noscript><style>.reveal{opacity:1;transform:none}</style></noscript>
 </head>
 <body>
-<div class="window">
-<div class="titlebar"><div class="left"><span>&#8592;&#8594;</span><span>&#10022;</span></div><div class="right"><span>&#8722;</span><span>&#9633;</span><span>&#10005;</span></div></div>
-<div class="content">
-<div class="header">
-  <div class="logo reveal"><div class="l1"><span>C</span><span>e</span><span>r</span><span>t</span><span>s</span></div><div class="l2">my learning</div><div class="star twinkle">&#9734;</div></div>
-  <div class="welcome reveal">little proof<br>of the journey <span class="twinkle">&#9733;</span><div style="border-bottom:2px solid #222;margin-top:6px;width:220px;margin-left:auto;"></div></div>
+<a class="skip-link" href="#main">Langsung ke isi</a>
+<div class="page-shadow" aria-hidden="true"></div>
+
+<div class="sheet">
+
+  <header class="masthead">
+    <div class="masthead-meta">
+      <span>Taun I &middot; No. 08</span>
+      <span id="edition-date">Ngemot tanggal&hellip;</span>
+      <span>Ponorogo &middot; Jawa Wetan</span>
+    </div>
+    <div class="masthead-rule"></div>
+    <p class="masthead-kicker">Kabar Karya lan Lelampahan</p>
+    <h1 class="masthead-title"><a href="index.html">Arya Warta</a></h1>
+    <p class="masthead-jawa" lang="jv" aria-hidden="true">ꦄꦂꦪꦮꦂꦠ</p>
+    <p class="masthead-tagline">Arya Wira Pratama &middot; edisi digital</p>
+    <nav class="masthead-nav" aria-label="Navigasi utama">
+      <a href="index.html" title="Beranda">Ngarep</a>
+      <a href="biodata.html" title="Biodata">Biodata</a>
+      <a href="riwayat.html" title="Riwayat">Lelakon</a>
+      <a href="projects.html" title="Proyek">Karya</a>
+      <a href="catatan.html" title="Catatan">Catatan</a>
+      <a href="certificates.html" aria-current="page" title="Sertifikat">Piagam</a>
+    </nav>
+  </header>
+
+  <main class="page-shell" id="main" tabindex="-1">
+
+    <div class="page-head reveal">
+      <p class="kicker">Arsip &amp; Kasil</p>
+      <h2 class="page-title">Piagam</h2>
+      <p class="page-dek">
+        Arsip piagam lan pelatihan sing bakal ditampilake.
+      </p>
+    </div>
+
+    <section class="empty-state reveal">
+      <p class="empty-jawa" lang="jv">ꦔꦼꦤ꧀ꦠꦺꦤꦶ ꦥꦶꦪꦒꦩ꧀</p>
+      <h3>Isih Ngenteni Piagam</h3>
+      <p class="empty-desc" lang="jv">
+        Durung ana piagam lan pelatihan sing kacathet. Kaca iki bakal dianyari
+        yen wis ana.
+      </p>
+      <p class="empty-id" lang="id">
+        Belum ada sertifikat yang tercatat &mdash; halaman ini akan diperbarui.
+      </p>
+    </section>
+
+  </main>
+
+  <footer class="colophon">
+    <span>&copy; 2026 Arya Wira Pratama</span>
+    <span>Dicithak ing Trenggalek &middot; Ditenagai HTML, CSS &amp; JavaScript</span>
+  </footer>
+
 </div>
-<nav>
-<a href="index.html" class="reveal">HOME</a><a href="biodata.html" class="reveal">BIODATA</a><a href="riwayat.html" class="reveal">RIWAYAT</a><a href="projects.html" class="reveal">PROJECTS</a><a href="certificates.html" class="reveal">CERTIFICATES</a>
-</nav>
-<div class="clock"><div>[ <span id="clock-time">--:--:-- --</span> ]</div><div id="clock-date">MONTH DD, YYYY</div></div>
-<section class="cert-intro reveal"><div><span class="tiny-label">CERTIFICATES & ACHIEVEMENTS</span><h1>things i've completed <span class="twinkle">&#9734;</span></h1><p>Halaman untuk menyimpan sertifikat, pelatihan, dan pencapaian yang ingin ditampilkan di portofolio.</p></div><div class="cert-note">learning<br>leaves traces.</div></section>
-<section class="cert-grid">
-<article class="cert-card reveal"><span class="cert-number">01 / CERTIFICATE</span><h2>Coming Soon</h2><div class="issuer">Tambahkan nama sertifikat di sini</div><p>Contoh: sertifikat kursus, workshop, seminar, atau pelatihan yang sudah diselesaikan.</p><span class="cert-status">READY TO ADD</span></article>
-<article class="cert-card reveal"><span class="cert-number">02 / CERTIFICATE</span><h2>Coming Soon</h2><div class="issuer">Tambahkan penyelenggara</div><p>Setiap kartu bisa nanti diisi judul, penyelenggara, tahun, deskripsi singkat, dan gambar sertifikat.</p><span class="cert-status">READY TO ADD</span></article>
-</section>
-<div class="cert-footer reveal">one certificate, one little step &#9825;</div>
-<div class="thanks reveal">thanks for visiting &#9825;</div>
-</div></div>
+
 <script src="script.js"></script>
 </body>
 </html>

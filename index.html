@@ -1,142 +1,382 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Portofolio Mas Arya</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Gochi+Hand&family=Caveat:wght@600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Arya Warta — Arya Wira Pratama</title>
+  <meta name="description" content="Kabar karya dan lelampahan Arya Wira Pratama, disajikan seperti koran Jawa kuno.">
+  <meta name="author" content="Arya Wira Pratama">
+  <meta name="theme-color" content="#E9DDC0">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Arya Warta">
+  <meta property="og:locale" content="id_ID">
+  <meta property="og:title" content="Arya Warta — Arya Wira Pratama">
+  <meta property="og:description" content="Kabar karya dan lelampahan Arya Wira Pratama, disajikan seperti koran Jawa kuno.">
+  <meta property="og:image" content="your-photo.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Arya Warta — Arya Wira Pratama">
+  <meta name="twitter:description" content="Kabar karya dan lelampahan Arya Wira Pratama, disajikan seperti koran Jawa kuno.">
+  <meta name="twitter:image" content="your-photo.jpg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,400..900&family=Courier+Prime:wght@400;700&family=EB+Garamond:ital,wght@0,400;0,600;1,400&family=Grenze+Gotisch:wght@100..900&family=Noto+Sans+Javanese:wght@400;700&family=Pinyon+Script&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <noscript><style>.reveal{opacity:1;transform:none}</style></noscript>
 </head>
 <body>
+<a class="skip-link" href="#main">Langsung ke isi</a>
+<div class="page-shadow" aria-hidden="true"></div>
 
-<div class="window">
+<div class="sheet">
 
-  <div class="titlebar">
-    <div class="left">
-      <span>&#8592;&#8594;</span>
-      <span>&#10022;</span>
+  <header class="masthead">
+    <div class="masthead-meta">
+      <span>Taun I &middot; No. 08</span>
+      <span id="edition-date">Ngemot tanggal&hellip;</span>
+      <span>Ponorogo &middot; Jawa Wetan</span>
     </div>
-    <div class="right">
-      <span>&#8722;</span>
-      <span>&#9633;</span>
-      <span>&#10005;</span>
-    </div>
-  </div>
-
-  <div class="content">
-
-    <!-- header -->
-    <div class="header">
-      <div class="logo reveal">
-        <div class="l1"><span>P</span><span>o</span><span>r</span><span>t</span><span>o</span>folio</div>
-        <div class="l2">Mas Arya</div>
-        <div class="star twinkle">&#9734;</div>
-      </div>
-
-      <div class="welcome reveal">
-        welcome to<br>
-        my homepage <span style="font-size:20px;" class="twinkle">&#9733;</span>
-        <div style="border-bottom:2px solid #222; margin-top:6px; width:220px; margin-left:auto;"></div>
-      </div>
-    </div>
-
-    <nav>
-      <a href="index.html" class="reveal">HOME</a>
-      <a href="biodata.html" class="reveal">BIODATA</a>
-      <a href="riwayat.html" class="reveal">RIWAYAT</a>
-      <a href="projects.html" class="reveal">PROJECTS</a>
-      <a href="certificates.html" class="reveal">CERTIFICATES</a>
+    <div class="masthead-rule"></div>
+    <p class="masthead-kicker">Kabar Karya lan Lelampahan</p>
+    <h1 class="masthead-title"><a href="index.html">Arya Warta</a></h1>
+    <p class="masthead-jawa" lang="jv" aria-hidden="true">ꦄꦂꦪꦮꦂꦠ</p>
+    <p class="masthead-tagline">Arya Wira Pratama &middot; edisi digital</p>
+    <nav class="masthead-nav" aria-label="Navigasi utama">
+      <a href="index.html" aria-current="page" title="Beranda">Ngarep</a>
+      <a href="biodata.html" title="Biodata">Biodata</a>
+      <a href="riwayat.html" title="Riwayat">Lelakon</a>
+      <a href="projects.html" title="Proyek">Karya</a>
+      <a href="catatan.html" title="Catatan">Catatan</a>
+      <a href="certificates.html" title="Sertifikat">Piagam</a>
     </nav>
+  </header>
 
-    <div class="clock">
-      <div>[ <span id="clock-time">--:--:-- --</span> ]</div>
-      <div id="clock-date">MONTH DD, YYYY</div>
-    </div>
+  <main class="page-shell" id="main" tabindex="-1">
 
-    <!-- main -->
-    <div class="main">
+    <!-- ===== HALAMAN DEPAN ===== -->
+    <div class="front-grid">
 
-      <div class="side-list">
-        <div class="side-item reveal"><span class="mark">&#10022;</span> mahasiswa</div>
-        <div class="side-item underline reveal"><span class="mark">&#10022;</span> <span>pengajar tpa</span></div>
-
-        <div class="note-left reveal">
-          currently<br>
-          making things<br>
-          online
-          <div><u>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</u></div>
-        </div>
-      </div>
-
-      <div class="portrait-wrap">
-        <div class="portrait has-img reveal" id="portrait">
-          <img src="your-photo.jpg" alt="foto profil">
-        </div>
-      </div>
-
-      <div class="side-right">
-        <div class="bubble reveal">music,<br>coding,<br>running</div>
-        <div class="side-item2 reveal">&#10022; dreamer <span style="color:var(--pink);">&#9825;</span></div>
-        <div class="starblue twinkle">&#9734;</div>
-      </div>
-
-    </div>
-
-    <!-- footer -->
-    <div class="footer-row">
-      <div class="updated reveal">
-        <div class="hourglass">&#8987;</div>
-        <div>
-          <div class="label">UPDATED TODAY <span class="twinkle">&#9733;</span></div>
-          living between<br>projects
-        </div>
-      </div>
-
-      <div class="about reveal">
-        <h3>about me <span class="twinkle">&#9734;</span></h3>
-        <p>
-          arya wira pratama. 08 liner.<br>
-          based in trenggalek and the internet.
+      <section class="lead reveal">
+        <p class="kicker">Warta Utama</p>
+        <h2 class="headline">Membangun Karya di Persimpangan Kode, Ilmu, dan Komunitas</h2>
+        <p class="dek">
+          Dari ruang belajar pesantren hingga baris-baris kode, Arya Wira Pratama
+          merawat satu keyakinan sederhana: karya yang baik lahir dari kebiasaan
+          yang konsisten.
         </p>
-        <p style="font-style:italic;">
-          &ldquo;Dunia tidak pernah benar-benar kehilangan jejak.<br>
-          Kebaikan meninggalkan cahaya yang kelak kembali<br>
-          menerangi langkahmu; kejahatan meninggalkan<br>
-          bayang-bayang yang suatu hari akan mengejarmu&mdash;<br>
-          barangkali seratus kali lebih panjang dari<br>
-          bayangan yang kau tinggalkan.&rdquo;
-        </p>
-        <div class="keep-real">keep it<br>real</div>
-      </div>
+        <div class="byline">Oleh <strong>Arya Wira Pratama</strong> &middot; Trenggalek</div>
 
-      <div class="sticky reveal" id="links">
-        <div class="tape"></div>
-        <h4>today:</h4>
-        <ul>
-          <li>&#9733; sholat</li>
-          <li>&#9733; makan</li>
-          <li>&#9733; tidur</li>
-          <li>&#9733; belajar</li>
-        </ul>
-        <div class="socials">
-          <a href="https://www.instagram.com/aryas.note/" target="_blank" rel="noopener" aria-label="Instagram">
-            <svg viewBox="0 0 24 24"><path d="M12 2.2c3.2 0 3.6 0 4.85.07 1.17.05 1.97.24 2.43.4a4.9 4.9 0 0 1 1.77 1.15 4.9 4.9 0 0 1 1.15 1.77c.16.46.35 1.26.4 2.43.06 1.25.07 1.65.07 4.85s-.01 3.6-.07 4.85c-.05 1.17-.24 1.97-.4 2.43a4.9 4.9 0 0 1-1.15 1.77 4.9 4.9 0 0 1-1.77 1.15c-.46.16-1.26.35-2.43.4-1.25.06-1.65.07-4.85.07s-3.6-.01-4.85-.07c-1.17-.05-1.97-.24-2.43-.4a4.9 4.9 0 0 1-1.77-1.15 4.9 4.9 0 0 1-1.15-1.77c-.16-.46-.35-1.26-.4-2.43C2.21 15.6 2.2 15.2 2.2 12s.01-3.6.07-4.85c.05-1.17.24-1.97.4-2.43A4.9 4.9 0 0 1 3.82 3c.5-.5 1.06-.9 1.77-1.15.46-.16 1.26-.35 2.43-.4C9.27 2.21 9.67 2.2 12 2.2Zm0 1.8c-3.15 0-3.52.01-4.76.07-.96.04-1.48.2-1.82.33-.46.18-.78.4-1.13.74-.34.35-.56.67-.74 1.13-.13.34-.29.86-.33 1.82C3.16 8.33 3.15 8.7 3.15 12s.01 3.67.07 4.91c.04.96.2 1.48.33 1.82.18.46.4.78.74 1.13.35.34.67.56 1.13.74.34.13.86.29 1.82.33 1.24.06 1.61.07 4.76.07s3.52-.01 4.76-.07c.96-.04 1.48-.2 1.82-.33.46-.18.78-.4 1.13-.74.34-.35.56-.67.74-1.13.13-.34.29-.86.33-1.82.06-1.24.07-1.61.07-4.91s-.01-3.67-.07-4.91c-.04-.96-.2-1.48-.33-1.82a3.1 3.1 0 0 0-.74-1.13 3.1 3.1 0 0 0-1.13-.74c-.34-.13-.86-.29-1.82-.33C15.52 4.01 15.15 4 12 4Zm0 3.15a4.85 4.85 0 1 1 0 9.7 4.85 4.85 0 0 1 0-9.7Zm0 1.8a3.05 3.05 0 1 0 0 6.1 3.05 3.05 0 0 0 0-6.1Zm5.04-2a1.13 1.13 0 1 1 0 2.27 1.13 1.13 0 0 1 0-2.27Z"/></svg>
+        <figure class="photo">
+          <a class="lightbox-trigger" href="your-photo.jpg" data-lightbox aria-label="Perbesar foto Arya Wira Pratama">
+            <div class="halftone">
+              <img src="your-photo.jpg" alt="Foto Arya Wira Pratama" width="1080" height="1342" decoding="async">
+            </div>
           </a>
-          <a href="https://github.com/aksara26" target="_blank" rel="noopener" aria-label="GitHub">
-            <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.58 2 12.2c0 4.5 2.87 8.32 6.84 9.67.5.1.68-.22.68-.49 0-.24-.01-1.04-.01-1.88-2.78.51-3.5-.7-3.72-1.34-.13-.33-.68-1.34-1.16-1.62-.4-.22-.97-.75-.01-.77.9-.01 1.54.84 1.75 1.18 1.03 1.75 2.67 1.26 3.32.96.1-.76.4-1.26.73-1.55-2.55-.3-5.23-1.31-5.23-5.82 0-1.28.44-2.34 1.17-3.16-.12-.3-.51-1.5.11-3.12 0 0 .96-.31 3.14 1.2a10.5 10.5 0 0 1 5.72 0c2.18-1.51 3.14-1.2 3.14-1.2.62 1.62.23 2.82.11 3.12.73.82 1.17 1.87 1.17 3.16 0 4.52-2.69 5.51-5.25 5.81.41.37.78 1.09.78 2.2 0 1.59-.01 2.87-.01 3.26 0 .27.18.6.69.49A10.2 10.2 0 0 0 22 12.2C22 6.58 17.52 2 12 2Z"/></svg>
-          </a>
+          <figcaption>Foto: dokumentasi pribadi. Arya Wira Pratama, mahasiswa Teknik Informatika.</figcaption>
+        </figure>
+
+        <div class="lead-body">
+          <p>
+            Trenggalek &mdash; Perjalanan pendidikan Arya dimulai dari bangku taman
+            kanak-kanak di Ponorogo, lalu berlanjut ke sekolah dasar, sebelum
+            akhirnya menempuh pendidikan menengah di Pondok Modern Darussalam
+            Gontor. Kini ia melanjutkan studi Teknik Informatika di Universitas
+            Darussalam Gontor.
+          </p>
+          <p>
+            Di tengah jadwal kuliah, Arya menjadi staff IT Perpustakaan UNIDA
+            Gontor dan aktif sebagai pengajar TPA. Baginya, bekerja dengan
+            teknologi dan mendampingi belajar sama-sama melatih kesabaran,
+            kejelasan berpikir, serta tanggung jawab.
+          </p>
+          <p>
+            Minatnya pada teknologi tumbuh dari rasa penasaran: bagaimana sebuah
+            halaman web bisa bekerja, bagaimana logika sederhana dapat
+            menyelesaikan masalah, dan bagaimana sebuah proyek kecil bisa
+            membantu orang lain. Musik, coding, dan lari menjadi tiga cara ia
+            menjaga ritme belajar.
+          </p>
         </div>
-      </div>
+      </section>
+
+      <aside class="rail">
+        <div class="rail-box reveal">
+          <h3 class="box-title">Bab Redaksi</h3>
+          <dl class="facts">
+            <div><dt>Nama</dt><dd>Arya Wira Pratama</dd></div>
+            <div><dt>Lahir</dt><dd>2008</dd></div>
+            <div><dt>Domisili</dt><dd>Trenggalek</dd></div>
+            <div><dt>Status</dt><dd>Mahasiswa</dd></div>
+            <div><dt>Kegiatan</dt><dd>Staff IT Perpustakaan UNIDA Gontor &amp; pengajar TPA</dd></div>
+            <div><dt>Fokus</dt><dd>Web &amp; Pemrograman</dd></div>
+          </dl>
+        </div>
+
+        <div class="rail-box reveal">
+          <h3 class="box-title">Lagi Digarap</h3>
+          <p class="rail-note">
+            <b>Belajar &amp; membangun.</b><br>
+            Menyusun proyek web, memperdalam logika pemrograman, dan
+            merapikan arsip karya di GitHub.
+          </p>
+        </div>
+
+        <div class="rail-box reveal">
+          <h3 class="box-title">Warta Ringkes</h3>
+          <ul class="briefs">
+            <li>
+              <span class="brief-date">14 November 2026</span>
+              <a href="riwayat.html#renang">Renang ing Tirto Joyo</a>
+              <span class="brief-desc">
+                Ustadz, ustadzah, dan anak-anak TPA Al-Kholifah berenang bersama.
+              </span>
+            </li>
+            <li>
+              <span class="brief-date">2026</span>
+              <a href="riwayat.html#tpa">Ngajar ing TPA Al-Kholifah</a>
+              <span class="brief-desc">
+                Mendampingi anak-anak TPA belajar dan bermain.
+              </span>
+            </li>
+            <li>
+              <span class="brief-date">Perpustakaan UNIDA Gontor</span>
+              <a href="riwayat.html#perpustakaan">Staff IT Perpustakaan</a>
+              <span class="brief-desc">
+                Kegiatan bersama tim perpustakaan dan dokumentasi kerja.
+              </span>
+            </li>
+            <li>
+              <span class="brief-date">2026 &middot; Karya</span>
+              <a href="projects.html">Panduan Sholat</a>
+              <span class="brief-desc">
+                Situs panduan sholat mazhab Syafi&rsquo;i.
+              </span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="rail-box reveal">
+          <h3 class="box-title">Wacan Cepet</h3>
+          <p class="rail-note">
+            <a href="biodata.html#pawiyatan-heading">Lelakon pawiyatan &rarr;</a><br>
+            <a href="riwayat.html">Kegiatan &amp; pangalaman &rarr;</a><br>
+            <a href="projects.html">Warta karya &rarr;</a><br>
+            <a href="catatan.html">Catatan &amp; pustaka &rarr;</a><br>
+            <a href="certificates.html">Arsip piagam &rarr;</a>
+          </p>
+        </div>
+      </aside>
+
     </div>
 
-    <div class="thanks reveal">thanks for visiting &#9825;</div>
+    <!-- ===== LELAKON ANYAR ===== -->
+    <section class="section reveal">
+      <div class="section-head">
+        <h2>Lelakon Anyar</h2>
+        <a href="riwayat.html">Kabeh lelakon &rarr;</a>
+      </div>
 
-  </div>
+      <div class="teasers">
+        <article class="teaser">
+          <a class="lightbox-trigger teaser-photo" href="renang-1-web.jpg" data-lightbox aria-label="Perbesar foto renang di Tirto Joyo">
+            <figure class="photo">
+              <div class="halftone">
+                <img src="renang-1-web.jpg" alt="Anak-anak TPA Al-Kholifah berenang di Tirto Joyo"
+                     width="1200" height="900" loading="lazy" decoding="async">
+              </div>
+            </figure>
+          </a>
+          <p class="teaser-meta">14 November 2026 &middot; Tirto Joyo</p>
+          <h3><a href="riwayat.html#renang">Renang bareng Ustadz lan Anak TPA</a></h3>
+          <p class="teaser-desc">
+            Sehari melepas penat di kolam Tirto Joyo: tawa, cipratan air, dan
+            pendampingan para ustadz serta ustadzah TPA Al-Kholifah.
+          </p>
+          <a class="teaser-link" href="riwayat.html#renang">Waca lelakon <span>&rarr;</span></a>
+        </article>
+
+        <article class="teaser">
+          <a class="lightbox-trigger teaser-photo" href="tpa-web.jpg" data-lightbox aria-label="Perbesar foto pengajar TPA Al-Kholifah">
+            <figure class="photo">
+              <div class="halftone">
+                <img src="tpa-web.jpg" alt="Para ustadz pengajar TPA Al-Kholifah"
+                     width="960" height="960" loading="lazy" decoding="async">
+              </div>
+            </figure>
+          </a>
+          <p class="teaser-meta">2026 &middot; TPA Al-Kholifah</p>
+          <h3><a href="riwayat.html#tpa">Ngajar kanthi Ikhlas ing TPA</a></h3>
+          <p class="teaser-desc">
+            Di sela kuliah, Arya ikut mendampingi anak-anak TPA belajar huruf,
+            membaca, dan dasar-dasar ilmu agama bersama para ustadz.
+          </p>
+          <a class="teaser-link" href="riwayat.html#tpa">Waca lelakon <span>&rarr;</span></a>
+        </article>
+
+        <article class="teaser">
+          <a class="lightbox-trigger teaser-photo" href="kumpulPerpus.jpeg" data-lightbox aria-label="Perbesar foto kegiatan Perpustakaan UNIDA Gontor">
+            <figure class="photo">
+              <div class="halftone">
+                <img src="kumpulPerpus.jpeg" alt="Kegiatan bersama tim di Perpustakaan UNIDA Gontor"
+                     width="1280" height="722" loading="lazy" decoding="async">
+              </div>
+            </figure>
+          </a>
+          <p class="teaser-meta">Perpustakaan UNIDA Gontor</p>
+          <h3><a href="riwayat.html#perpustakaan">Ngabdi ing Perpustakaan</a></h3>
+          <p class="teaser-desc">
+            Arya bertugas sebagai staff IT dan turut berkegiatan bersama tim
+            Perpustakaan UNIDA Gontor.
+          </p>
+          <a class="teaser-link" href="riwayat.html#perpustakaan">Waca lelakon <span>&rarr;</span></a>
+        </article>
+      </div>
+    </section>
+
+    <!-- ===== PROYEK PILIHAN ===== -->
+    <section class="section reveal">
+      <div class="section-head">
+        <h2>Warta Khusus</h2>
+        <a href="projects.html">Kabeh karya &rarr;</a>
+      </div>
+
+      <div class="cards-3">
+        <article class="project-card reveal">
+          <div class="card-top"><span>01</span><span>Web</span></div>
+          <h3>NusaTani</h3>
+          <p>
+            Aplikasi marketplace pertanian yang dikembangkan dengan Django,
+            berfokus pada hubungan petani, pembeli, dan produk pertanian.
+          </p>
+          <div class="tech"><span>Python</span><span>Django</span></div>
+          <a class="project-link" href="https://github.com/aksara26/Nusatani" target="_blank" rel="noopener">
+            Deleng repositori <span>&rarr;</span>
+          </a>
+        </article>
+
+        <article class="project-card reveal">
+          <div class="card-top"><span>02</span><span>Desktop Linux</span></div>
+          <h3>IslamicHabits</h3>
+          <p>
+            Aplikasi desktop Linux untuk mencatat ibadah dan kebiasaan harian
+            secara privat, dengan data yang tersimpan lokal.
+          </p>
+          <div class="tech"><span>Python</span><span>GTK4</span><span>Linux</span></div>
+          <a class="project-link" href="https://github.com/aksara26/IslamicHabits" target="_blank" rel="noopener">
+            Deleng repositori <span>&rarr;</span>
+          </a>
+        </article>
+
+        <article class="project-card reveal">
+          <div class="card-top"><span>03</span><span>Pembelajaran</span></div>
+          <h3>Maba</h3>
+          <p>
+            Dokumentasi dan materi pembelajaran selama kegiatan Maba.
+          </p>
+          <div class="tech"><span>Pembelajaran</span><span>Dokumentasi</span></div>
+          <a class="project-link" href="https://github.com/aksara26/Maba" target="_blank" rel="noopener">
+            Deleng repositori <span>&rarr;</span>
+          </a>
+        </article>
+      </div>
+    </section>
+
+    <!-- ===== EDITORIAL ===== -->
+    <section class="section reveal">
+      <div class="section-head">
+        <h2>Panyaruwe</h2>
+      </div>
+
+      <div class="editorial-grid">
+        <div class="editorial-body">
+          <p>
+            Ada banyak cara untuk belajar teknologi. Sebagian orang memulainya
+            dari teori, sebagian lain dari proyek kecil yang selesai. Arya
+            memilih jalur kedua: membuat sesuatu yang nyata, sekecil apa pun,
+            lalu mempelajari kesalahannya.
+          </p>
+          <p>
+            Baginya, coding adalah keterampilan yang paling jujur. Kode tidak
+            peduli pada niat baik; ia hanya bekerja jika logikanya benar. Dari
+            situlah ia belajar untuk teliti, sabar, dan tidak takut memperbaiki
+            diri.
+          </p>
+          <p>
+            Pengalaman mengajar di TPA memberi warna lain: kemampuan menjelaskan
+            hal rumit dengan bahasa sederhana. Dua dunia itu &mdash; mengajar dan
+            membangun &mdash; saling melengkapi.
+          </p>
+          <p>
+            Ke depan, ia ingin terus menambah proyek, memperdalam dasar-dasar
+            ilmu komputer, dan berkontribusi pada hal-hal yang bermanfaat bagi
+            orang sekitar.
+          </p>
+        </div>
+
+        <aside class="pullquote reveal">
+          <p class="script">
+            &ldquo;Dunia tidak pernah benar-benar kehilangan jejak. Kebaikan
+            meninggalkan cahaya yang kelak kembali menerangi langkahmu.&rdquo;
+          </p>
+          <p class="signature">Arya Wira Pratama</p>
+        </aside>
+      </div>
+    </section>
+
+    <!-- ===== PEPATAH JAWA ===== -->
+    <section class="section proverb reveal">
+      <div class="section-head">
+        <h2>Pepatah Jawa</h2>
+      </div>
+
+      <figure class="proverb-card">
+        <p class="proverb-jawa" lang="jv">ꦮꦶꦮꦶꦠꦺ ꦲꦶꦱꦺꦴ ꦗꦭꦫꦤ꧀ ꦱꦏ ꦏꦸꦭꦶꦤꦺꦴ꧉</p>
+        <p class="proverb-latin" lang="jv">Wiwite iso jalaran saka kulino</p>
+        <p class="proverb-meaning" lang="id">Awalnya bisa karena terbiasa.</p>
+        <figcaption>Pepatah Jawa &middot; bab sinau lan laku</figcaption>
+      </figure>
+    </section>
+
+    <!-- ===== IKLAN BARIS / KEAHLIAN ===== -->
+    <section class="section reveal">
+      <div class="section-head">
+        <h2>Iklan Baris &mdash; Kaprigelan</h2>
+      </div>
+
+      <div class="classified">
+        <div><b>HTML</b><small>Markup</small></div>
+        <div><b>CSS</b><small>Tata letak</small></div>
+        <div><b>JavaScript</b><small>Interaksi</small></div>
+        <div><b>React</b><small>Antarmuka</small></div>
+        <div><b>C++</b><small>Logika</small></div>
+        <div><b>Python</b><small>Dasar</small></div>
+        <div><b>Git</b><small>Versi</small></div>
+        <div><b>Linux Fedora</b><small>Sistem</small></div>
+      </div>
+    </section>
+
+    <!-- ===== KORESPONDENSI ===== -->
+    <section class="backpage reveal">
+      <h2>Sesambungan</h2>
+      <p>
+        Untuk kerja sama, pertanyaan, atau sekadar menyapa, silakan hubungi
+        melalui kanal resmi di bawah ini.
+      </p>
+      <div class="contact-links">
+        <a href="https://github.com/aksara26" target="_blank" rel="noopener">GitHub &mdash; aksara26</a>
+        <a href="https://www.instagram.com/aryas.note/" target="_blank" rel="noopener">Instagram &mdash; @aryas.note</a>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="colophon">
+    <span>&copy; 2026 Arya Wira Pratama</span>
+    <span>Dicithak ing Trenggalek &middot; Ditenagai HTML, CSS &amp; JavaScript</span>
+  </footer>
+
 </div>
 
 <script src="script.js"></script>
-
 </body>
 </html>
