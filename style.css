@@ -163,6 +163,13 @@ body.is-turning .sheet{
   border-bottom:1px solid var(--ink);
 }
 
+.masthead-logo{
+  display:block;
+  width:clamp(86px, 9vw, 116px);
+  height:auto;
+  margin:20px auto 2px;
+}
+
 .masthead-kicker{
   margin:16px 0 4px;
   font-family:var(--mono);
@@ -1336,6 +1343,7 @@ body.lightbox-open{ overflow:hidden; }
   .sheet{ padding:24px 20px 26px; }
   .sheet::before{ inset:8px; }
   .masthead-meta{ flex-wrap:wrap; justify-content:center; gap:3px 14px; font-size:8.5px; letter-spacing:.08em; }
+  .masthead-logo{ width:80px; margin:16px auto 0; }
   .masthead-kicker{ letter-spacing:.24em; }
   .masthead-kicker::before,
   .masthead-kicker::after{ content:""; margin:0; }
