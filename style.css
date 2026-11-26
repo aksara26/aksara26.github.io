@@ -808,6 +808,60 @@ body.lightbox-open{ overflow:hidden; }
 }
 .subsection .section-date{ margin:0 0 18px; }
 
+/* ---------- papan skor futsal ---------- */
+.scoreboard{
+  display:grid;
+  grid-template-columns:minmax(0, 1fr) auto minmax(0, 1fr);
+  align-items:stretch;
+  margin:0 0 26px;
+  background:var(--paper-2);
+  border-top:3px double var(--ink);
+  border-bottom:3px double var(--ink);
+  text-align:center;
+}
+.score-team{
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  padding:18px 16px 16px;
+}
+.score-name{
+  font-family:var(--mono);
+  font-size:10px;
+  letter-spacing:.16em;
+  text-transform:uppercase;
+  color:var(--muted);
+}
+.score-num{
+  margin-top:2px;
+  font-family:var(--body);
+  font-weight:700;
+  font-size:clamp(3rem, 7vw, 4.6rem);
+  line-height:.95;
+}
+.score-team--winner .score-num{ color:var(--accent); }
+.score-vs{
+  display:flex;
+  align-items:center;
+  padding:0 18px;
+  border-left:1px solid var(--rule);
+  border-right:1px solid var(--rule);
+  font-family:var(--mono);
+  font-size:11px;
+  letter-spacing:.18em;
+  text-transform:uppercase;
+  color:var(--muted);
+}
+
+.futsal-grid{
+  display:grid;
+  grid-template-columns:minmax(0, .85fr) minmax(0, 1.15fr);
+  gap:34px;
+  align-items:start;
+}
+.futsal-grid .photo{ margin:0; }
+.futsal-copy .editorial-body{ column-count:1; }
+
 .pullquote{
   position:relative;
   padding:30px 30px 26px;
@@ -1301,10 +1355,13 @@ body.lightbox-open{ overflow:hidden; }
   .front-grid,
   .editorial-grid,
   .bio-grid,
-  .tpa-grid{ grid-template-columns:1fr; }
+  .tpa-grid,
+  .futsal-grid{ grid-template-columns:1fr; }
 
   .tpa-grid{ gap:28px; }
   .tpa-grid .photo{ max-width:420px; }
+  .futsal-grid{ gap:28px; }
+  .futsal-grid .photo{ max-width:440px; }
   .renang-gallery{ grid-template-columns:1fr; gap:24px; justify-items:center; }
   .renang-gallery .photo{ width:100%; max-width:560px; }
 
@@ -1370,6 +1427,9 @@ body.lightbox-open{ overflow:hidden; }
   .tpa-copy p{ text-align:left; hyphens:none; }
   .tpa-copy p:first-of-type::first-letter{ font-size:3.2em; }
   .section-date{ font-size:9px; letter-spacing:.1em; }
+  .score-team{ padding:14px 10px 12px; }
+  .score-name{ font-size:9px; letter-spacing:.1em; }
+  .score-vs{ padding:0 12px; }
   .timeline li{ grid-template-columns:1fr; gap:5px; }
   .timeline li:first-child{ border-top:3px double var(--ink); }
   .colophon{ justify-content:flex-start; }
